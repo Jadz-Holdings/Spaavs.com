@@ -4,6 +4,9 @@ import { SpaavsTagline } from "@/components/brand/SpaavsTagline";
 import { SocialLinks } from "@/components/brand/SocialLinks";
 import { siteConfig } from "@/lib/site";
 
+/** Static copyright year — avoids prerender Date() under Cache Components. */
+const COPYRIGHT_YEAR = 2026;
+
 const legal = [
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Use" },
@@ -11,8 +14,6 @@ const legal = [
 ];
 
 export function Footer() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--bg)]">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-14 md:grid-cols-[1.2fr_1fr_1fr] md:px-8 md:py-16">
@@ -102,7 +103,7 @@ export function Footer() {
       <div className="border-t border-[var(--border)]">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-[var(--ink-muted)] md:flex-row md:items-center md:justify-between md:px-8">
           <p>
-            © {year} SPAAVS. A {siteConfig.parent} business.
+            © {COPYRIGHT_YEAR} SPAAVS. A {siteConfig.parent} business.
           </p>
           <p>Connected parking and mobility infrastructure — in development.</p>
         </div>
