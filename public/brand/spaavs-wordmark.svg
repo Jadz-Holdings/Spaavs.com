@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1903 258" role="img" aria-label="SPAAVS">
+  <title>SPAAVS</title>
+  <!-- Wordmark only  tagline is a separate brand asset -->
+  <image
+    xlink:href="spaavs-wordmark-clean.png"
+    href="spaavs-wordmark-clean.png"
+    width="1903"
+    height="258"
+    preserveAspectRatio="xMidYMid meet"
+  />
+</svg>
