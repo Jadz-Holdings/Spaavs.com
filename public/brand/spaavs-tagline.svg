@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 28" role="img" aria-label="Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.">
+  <title>Beyond Parking. Intelligent Mobility. Autonomous Infrastructure.</title>
+  <style>
+    .t {
+      fill: #111111;
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+    }
+    .dot { fill: #0ABAB5; }
+  </style>
+  <!-- Tagline asset only  not part of the SPAAVS wordmark -->
+  <text text-anchor="middle" x="460" y="18" class="t">
+    <tspan>Beyond Parking</tspan>
+    <tspan dx="10" class="dot" fill="#0ABAB5" font-size="10" dy="-1">&#9679;</tspan>
+    <tspan dx="10" dy="1">Intelligent Mobility</tspan>
+    <tspan dx="10" class="dot" fill="#0ABAB5" font-size="10" dy="-1">&#9679;</tspan>
+    <tspan dx="10" dy="1">Autonomous Infrastructure</tspan>
+  </text>
+</svg>

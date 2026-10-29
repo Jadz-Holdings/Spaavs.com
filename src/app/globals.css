@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="tiffany"] {
+  --bg: #ffffff;
+  --ink: #111111;
+  --ink-muted: #444444;
+  --ink-on-contrast: #f5f7f7;
+  --tiffany: #0abab5;
+  --tiffany-dark: #087e7b;
+  --accent: #0abab5;
+  --accent-border: #0abab5;
+  --border: #e5f3f2;
+  --surface-soft: #f4fbfb;
+  --surface-contrast: #111111;
+  --btn-bg: #ffffff;
+  --btn-fg: #111111;
+  --btn-hover-bg: #0abab5;
+  --btn-hover-fg: #062e2d;
+  --btn-hover-border: #087e7b;
+  --chrome: linear-gradient(
+    135deg,
+    rgba(10, 186, 181, 0.08),
+    rgba(255, 255, 255, 0) 42%,
+    rgba(8, 126, 123, 0.05)
+  );
+  --hero-veil: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 255, 255, 0.78) 42%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  --grid-line: rgba(10, 186, 181, 0.12);
+}
+
+[data-theme="mono"] {
+  --bg: #ffffff;
+  --ink: #111111;
+  --ink-muted: #444444;
+  --ink-on-contrast: #f7f7f7;
+  --tiffany: #0abab5;
+  --tiffany-dark: #087e7b;
+  --accent: #414141;
+  --accent-border: #414141;
+  --border: #e5e5e5;
+  --surface-soft: #f7f7f7;
+  --surface-contrast: #1a1a1a;
+  --btn-bg: #ffffff;
+  --btn-fg: #111111;
+  --btn-hover-bg: #111111;
+  --btn-hover-fg: #ffffff;
+  --btn-hover-border: #111111;
+  --chrome: linear-gradient(
+    135deg,
+    rgba(191, 195, 198, 0.22),
+    rgba(255, 255, 255, 0) 45%,
+    rgba(65, 65, 65, 0.05)
+  );
+  --hero-veil: linear-gradient(
+    105deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.8) 42%,
+    rgba(255, 255, 255, 0.22) 100%
+  );
+  --grid-line: rgba(65, 65, 65, 0.1);
+}
+
+[data-theme="dark"] {
+  --bg: #0d0f10;
+  --ink: #f2f4f4;
+  --ink-muted: #b7bfbf;
+  --ink-on-contrast: #0d0f10;
+  --tiffany: #0abab5;
+  --tiffany-dark: #087e7b;
+  --accent: #0abab5;
+  --accent-border: #0abab5;
+  --border: #243033;
+  --surface-soft: #15191a;
+  --surface-contrast: #e8eded;
+  --btn-bg: #15191a;
+  --btn-fg: #f2f4f4;
+  --btn-hover-bg: #0abab5;
+  --btn-hover-fg: #062e2d;
+  --btn-hover-border: #087e7b;
+  --chrome: linear-gradient(
+    135deg,
+    rgba(10, 186, 181, 0.12),
+    rgba(13, 15, 16, 0) 40%,
+    rgba(191, 195, 198, 0.05)
+  );
+  --hero-veil: linear-gradient(
+    105deg,
+    rgba(13, 15, 16, 0.94) 0%,
+    rgba(13, 15, 16, 0.78) 45%,
+    rgba(13, 15, 16, 0.25) 100%
+  );
+  --grid-line: rgba(10, 186, 181, 0.14);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--tiffany) 35%, white);
+  color: var(--ink);
+}
+
+.chrome-panel {
+  background-image: var(--chrome);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 75%);
+}
+
+.reveal {
+  animation: rise 0.9s ease both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.36s;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.7;
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2.8s ease-in-out infinite;
+}
+
+@keyframes line-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.accent-line {
+  transform-origin: left;
+  animation: line-draw 1s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal-delay-1,
+  .reveal-delay-2,
+  .reveal-delay-3,
+  .pulse-dot,
+  .accent-line {
+    animation: none !important;
+  }
+}
