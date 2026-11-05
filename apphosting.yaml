@@ -1,0 +1,16 @@
+# Firebase App Hosting configuration for SPAAVS corporate site.
+# Docs: https://firebase.google.com/docs/app-hosting/configure
+
+runConfig:
+  minInstances: 0
+  maxInstances: 2
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+
+env:
+  - variable: NEXT_PUBLIC_SITE_URL
+    value: https://spaavs.com
+    availability:
+      - BUILD
+      - RUNTIME
