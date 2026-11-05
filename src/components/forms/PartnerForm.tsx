@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
+import { submitInquiry } from "@/lib/submitInquiry";
 
 const field =
   "w-full rounded-md border border-[var(--border)] bg-[var(--bg)] px-3.5 py-2.5 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--accent)]";
@@ -40,10 +41,8 @@ export function PartnerForm() {
     }
 
     try {
-      const res = await fetch("/api/partner", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      await submitInquiry(
+        {
           fullName: data.get("fullName"),
           company: data.get("company"),
           email: data.get("email"),
@@ -54,9 +53,9 @@ export function PartnerForm() {
           existingTech: data.get("existingTech"),
           services: data.getAll("services"),
           message: data.get("message"),
-        }),
-      });
-      if (!res.ok) throw new Error("failed");
+        },
+        "SPAAVS facility partner inquiry",
+      );
       setStatus("success");
       setMessage(
         "Thank you. Your facility partnership inquiry has been received.",
@@ -65,7 +64,7 @@ export function PartnerForm() {
     } catch {
       setStatus("error");
       setMessage(
-        "We could not send your inquiry right now. Please email info@jadzholdings.com.",
+        `We could not send your inquiry right now. Please email ${siteConfig.contact.email}.`,
       );
     }
   }

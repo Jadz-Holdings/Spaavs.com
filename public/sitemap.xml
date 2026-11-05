@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://spaavs.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://spaavs.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spaavs.com/solutions</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spaavs.com/how-it-works</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spaavs.com/facility-partners</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spaavs.com/autonomous-mobility</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spaavs.com/media</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spaavs.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://spaavs.com/privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://spaavs.com/terms</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://spaavs.com/settings</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+</urlset>

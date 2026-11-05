@@ -22,3 +22,16 @@ npm run dev
 - Company status: In Development
 
 See `docs/SPAAVS_MEMORY.md` for design/content memory pointers.
+
+## Deploy (Firebase App Hosting)
+
+1. Authenticate Firebase CLI / MCP (`firebase login`).
+2. Create or select a Firebase project on the **Blaze** plan (required for App Hosting).
+3. Set the active project, then deploy:
+
+```bash
+npx -y firebase-tools@latest use <project-id>
+npx -y firebase-tools@latest deploy --only apphosting
+```
+
+Config: `firebase.json`, `apphosting.yaml`.

@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
+import { submitInquiry } from "@/lib/submitInquiry";
 
 const field =
   "w-full rounded-md border border-[var(--border)] bg-[var(--bg)] px-3.5 py-2.5 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--accent)]";
@@ -29,10 +30,8 @@ export function ContactForm() {
     }
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+      await submitInquiry(
+        {
           fullName: data.get("fullName"),
           company: data.get("company"),
           email: data.get("email"),
@@ -41,12 +40,9 @@ export function ContactForm() {
           location: data.get("location"),
           message: data.get("message"),
           consent: data.get("consent") === "on",
-        }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Request failed");
-      }
+        },
+        "SPAAVS contact inquiry",
+      );
 
       setStatus("success");
       setMessage(
@@ -56,7 +52,7 @@ export function ContactForm() {
     } catch {
       setStatus("error");
       setMessage(
-        "We could not send your inquiry right now. Please email info@jadzholdings.com or try again.",
+        `We could not send your inquiry right now. Please email ${siteConfig.contact.email} or try again.`,
       );
     }
   }
@@ -128,7 +124,6 @@ export function ContactForm() {
         </span>
       </label>
 
-      {/* Honeypot */}
       <input
         type="text"
         name="company_website"
