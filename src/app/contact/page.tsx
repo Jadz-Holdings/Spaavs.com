@@ -54,7 +54,6 @@ export default function ContactPage() {
               {siteConfig.contact.addressLines.map((line) => (
                 <p key={line}>{line}</p>
               ))}
-              <p className="mt-2 text-xs">{siteConfig.contact.addressNote}</p>
             </div>
 
             <div className="space-y-3 border-t border-[var(--border)] pt-5">

@@ -23,8 +23,6 @@ export const siteConfig = {
       "Washington, DC 20001",
       "United States",
     ],
-    addressNote:
-      "Business mailing address. Not a staffed walk-in office or headquarters lobby.",
   },
   /**
    * Intended @spaavs profile URLs. Confirm ownership before treating as verified.
