@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { SpaavsLogo } from "@/components/brand/SpaavsLogo";
 import { SpaavsTagline } from "@/components/brand/SpaavsTagline";
 import { SocialLinks } from "@/components/brand/SocialLinks";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section, SectionHeader } from "@/components/ui/Section";
-import { StatusBadge } from "@/components/ui/StatusBadge";
 import { siteConfig } from "@/lib/site";
 
 const audiences = [
@@ -79,16 +77,13 @@ export default function HomePage() {
           aria-hidden
         />
 
-        <div className="relative mx-auto flex min-h-[calc(100vh-4.25rem)] max-w-6xl flex-col justify-center px-5 py-16 md:px-8 md:py-24">
-          <div className="max-w-2xl space-y-8">
-            <StatusBadge className="reveal" />
-            <div className="reveal reveal-delay-1 space-y-5">
-              <SpaavsLogo height={56} priority className="sm:hidden" />
-              <SpaavsLogo height={72} priority className="hidden sm:inline-flex" />
+        <div className="relative mx-auto flex min-h-[calc(100vh-4.25rem)] max-w-6xl flex-col justify-center px-5 py-14 sm:py-16 md:px-8 md:py-24">
+          <div className="max-w-3xl space-y-7 sm:space-y-8">
+            <div className="reveal space-y-5">
               <SpaavsTagline size="hero" align="left" asHeading />
+              <div className="h-px w-20 bg-[var(--tiffany)] accent-line sm:w-24" />
             </div>
-            <div className="reveal reveal-delay-2 h-px w-24 bg-[var(--tiffany)] accent-line" />
-            <div className="reveal reveal-delay-2 space-y-4 text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+            <div className="reveal reveal-delay-1 space-y-4 text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg">
               <p>
                 SPAAVS is developing a connected parking and mobility
                 infrastructure platform designed to transform existing parking
@@ -102,7 +97,7 @@ export default function HomePage() {
                 next-generation mobility.
               </p>
             </div>
-            <div className="reveal reveal-delay-3 flex flex-wrap gap-3">
+            <div className="reveal reveal-delay-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href="/about" size="lg">
                 Explore SPAAVS
               </ButtonLink>
