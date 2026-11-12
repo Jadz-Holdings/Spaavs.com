@@ -47,8 +47,7 @@ export default function PrivacyPage() {
           or {siteConfig.contact.phone} for privacy-related requests.
         </p>
         <p>
-          Mailing address: {siteConfig.contact.addressLines.join(", ")}.{" "}
-          {siteConfig.contact.addressNote}
+          Mailing address: {siteConfig.contact.addressLines.join(", ")}.
         </p>
       </div>
     </Section>
