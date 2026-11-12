@@ -12,7 +12,7 @@ const sizeClass: Record<NonNullable<SpaavsTaglineProps["size"]>, string> = {
   sm: "text-[0.65rem] sm:text-xs tracking-[0.18em]",
   md: "text-xs sm:text-sm tracking-[0.2em]",
   lg: "text-sm sm:text-base tracking-[0.22em]",
-  hero: "text-sm sm:text-base md:text-lg tracking-[0.18em] sm:tracking-[0.22em]",
+  hero: "text-[0.95rem] leading-relaxed sm:text-xl md:text-2xl tracking-[0.12em] sm:tracking-[0.16em] md:tracking-[0.18em]",
 };
 
 /**
@@ -29,16 +29,23 @@ export function SpaavsTagline({
   const alignClass = align === "center" ? "justify-center text-center" : "justify-start text-left";
   const Comp = asHeading ? "h1" : "p";
 
+  const gapClass =
+    size === "hero" ? "gap-x-2.5 gap-y-2 sm:gap-x-3 sm:gap-y-2.5" : "gap-x-2 gap-y-1";
+  const dotClass =
+    size === "hero"
+      ? "h-1.5 w-1.5 sm:h-2 sm:w-2"
+      : "h-1 w-1";
+
   return (
     <Comp
-      className={`flex flex-wrap items-center gap-x-2 gap-y-1 font-sans font-light text-[var(--ink)] ${sizeClass[size]} ${alignClass} ${className}`}
+      className={`flex flex-wrap items-center font-sans font-light text-[var(--ink)] ${gapClass} ${sizeClass[size]} ${alignClass} ${className}`}
       aria-label={siteConfig.tagline}
     >
       {parts.map((part, index) => (
-        <span key={part} className="inline-flex items-center gap-x-2">
+        <span key={part} className="inline-flex items-center gap-x-2.5 sm:gap-x-3">
           {index > 0 && (
             <span
-              className="inline-block h-1 w-1 shrink-0 rounded-full bg-[var(--tiffany)]"
+              className={`inline-block shrink-0 rounded-full bg-[var(--tiffany)] ${dotClass}`}
               aria-hidden="true"
             />
           )}
