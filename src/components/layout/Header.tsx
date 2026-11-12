@@ -26,9 +26,18 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[color:var(--bg)/0.92] backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:h-[4.25rem] md:px-8">
-        <Link href="/" className="shrink-0" aria-label="SPAAVS home">
-          <SpaavsLogo height={28} priority className="md:hidden" />
-          <SpaavsLogo height={32} priority className="hidden md:inline-flex" />
+        <Link
+          href="/"
+          className="inline-flex shrink-0 items-center"
+          aria-label="SPAAVS home"
+        >
+          {/* Single wordmark — avoids duplicate logos when Tailwind display utilities conflict */}
+          <SpaavsLogo
+            height={32}
+            priority
+            className="inline-flex items-center"
+            heightClassName="h-7 md:h-8"
+          />
         </Link>
 
         <nav
