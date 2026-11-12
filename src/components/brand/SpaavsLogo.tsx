@@ -4,6 +4,8 @@ type SpaavsLogoProps = {
   className?: string;
   /** Visual height in pixels for the raster wordmark. */
   height?: number;
+  /** Optional responsive height override via CSS (e.g. h-7 md:h-8). */
+  heightClassName?: string;
   priority?: boolean;
   variant?: "full" | "compact";
 };
@@ -15,6 +17,7 @@ type SpaavsLogoProps = {
 export function SpaavsLogo({
   className = "",
   height = 36,
+  heightClassName,
   priority = false,
   variant = "full",
 }: SpaavsLogoProps) {
@@ -26,15 +29,15 @@ export function SpaavsLogo({
       : "/brand/spaavs-wordmark-clean.png";
 
   return (
-    <span className={`inline-flex items-center ${className}`}>
+    <span className={className || "inline-flex items-center"}>
       <Image
         src={src}
         alt="SPAAVS"
         width={width}
         height={height}
         priority={priority}
-        className="h-auto w-auto select-none"
-        style={{ height, width: "auto" }}
+        className={`w-auto select-none ${heightClassName ?? ""}`}
+        style={heightClassName ? { width: "auto" } : { height, width: "auto" }}
       />
     </span>
   );

@@ -77,13 +77,13 @@ export default function HomePage() {
           aria-hidden
         />
 
-        <div className="relative mx-auto flex min-h-[calc(100vh-4.25rem)] max-w-6xl flex-col justify-center px-5 py-14 sm:py-16 md:px-8 md:py-24">
-          <div className="max-w-3xl space-y-7 sm:space-y-8">
-            <div className="reveal space-y-5">
+        <div className="relative mx-auto flex max-w-6xl flex-col justify-start px-5 pb-14 pt-6 sm:pb-16 sm:pt-10 md:min-h-[calc(100vh-4.25rem)] md:justify-center md:px-8 md:py-24">
+          <div className="max-w-3xl space-y-5 sm:space-y-7">
+            <div className="reveal space-y-4 sm:space-y-5">
               <SpaavsTagline size="hero" align="left" asHeading />
-              <div className="h-px w-20 bg-[var(--tiffany)] accent-line sm:w-24" />
+              <div className="h-px w-16 bg-[var(--tiffany)] accent-line sm:w-24" />
             </div>
-            <div className="reveal reveal-delay-1 space-y-4 text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg">
+            <div className="reveal reveal-delay-1 space-y-3 text-[0.95rem] leading-relaxed text-[var(--ink-muted)] sm:space-y-4 sm:text-lg">
               <p>
                 SPAAVS is developing a connected parking and mobility
                 infrastructure platform designed to transform existing parking
@@ -97,7 +97,7 @@ export default function HomePage() {
                 next-generation mobility.
               </p>
             </div>
-            <div className="reveal reveal-delay-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="reveal reveal-delay-2 flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap sm:pt-0">
               <ButtonLink href="/about" size="lg">
                 Explore SPAAVS
               </ButtonLink>
