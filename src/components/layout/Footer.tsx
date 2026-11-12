@@ -1,94 +1,32 @@
 import Link from "next/link";
-import { SocialLinks } from "@/components/brand/SocialLinks";
 import { siteConfig } from "@/lib/site";
 
 /** Static copyright year — avoids prerender Date() under Cache Components. */
 const COPYRIGHT_YEAR = 2026;
 
 const legal = [
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms of Use" },
-  { href: "/settings", label: "Theme Settings" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Footer() {
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--bg)]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-10 sm:gap-12 sm:py-14 md:grid-cols-2 md:px-8 md:py-16">
-        <div>
-          <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-[var(--ink)]">
-            Navigate
-          </p>
-          <ul className="space-y-2.5">
-            {siteConfig.nav.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-[var(--ink-muted)] transition-colors hover:text-[var(--accent)]"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-            {legal.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-[var(--ink-muted)] transition-colors hover:text-[var(--accent)]"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="space-y-4">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-[var(--ink)]">
-            Contact
-          </p>
-          <p className="text-sm text-[var(--ink-muted)]">
-            Phone:{" "}
-            <a
-              href={siteConfig.contact.phoneHref}
-              className="text-[var(--ink)] hover:text-[var(--accent)]"
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-5 text-xs text-[var(--ink-muted)] sm:flex-row sm:items-center sm:justify-between md:px-8">
+        <p>
+          © {COPYRIGHT_YEAR} SPAAVS. A {siteConfig.parent} business.
+        </p>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          {legal.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition-colors hover:text-[var(--accent)]"
             >
-              {siteConfig.contact.phone}
-            </a>
-          </p>
-          <p className="text-sm text-[var(--ink-muted)]">
-            Email:{" "}
-            <a
-              href={siteConfig.contact.emailHref}
-              className="text-[var(--ink)] hover:text-[var(--accent)]"
-            >
-              {siteConfig.contact.email}
-            </a>
-          </p>
-          <div className="text-sm leading-relaxed text-[var(--ink-muted)]">
-            <p>Mailing address:</p>
-            {siteConfig.contact.addressLines.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-            <p className="mt-2 text-xs opacity-80">
-              {siteConfig.contact.addressNote}
-            </p>
-          </div>
-          <div>
-            <p className="mb-2 text-xs uppercase tracking-[0.16em] text-[var(--ink-muted)]">
-              Follow {siteConfig.handle}
-            </p>
-            <SocialLinks />
-          </div>
-        </div>
-      </div>
-
-      <div className="border-t border-[var(--border)]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-[var(--ink-muted)] md:flex-row md:items-center md:justify-between md:px-8">
-          <p>
-            © {COPYRIGHT_YEAR} SPAAVS. A {siteConfig.parent} business.
-          </p>
-          <p>Connected parking and mobility infrastructure — in development.</p>
+              {item.label}
+            </Link>
+          ))}
         </div>
       </div>
     </footer>
