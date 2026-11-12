@@ -55,6 +55,7 @@ export function PartnerForm() {
           message: data.get("message"),
         },
         "SPAAVS facility partner inquiry",
+        "sales",
       );
       setStatus("success");
       setMessage(
@@ -64,7 +65,7 @@ export function PartnerForm() {
     } catch {
       setStatus("error");
       setMessage(
-        `We could not send your inquiry right now. Please email ${siteConfig.contact.email}.`,
+        `We could not send your inquiry right now. Please email ${siteConfig.contact.salesEmail}.`,
       );
     }
   }

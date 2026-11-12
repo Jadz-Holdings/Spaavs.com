@@ -3,7 +3,10 @@
 import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
-import { submitInquiry } from "@/lib/submitInquiry";
+import {
+  mailboxForInquiryCategory,
+  submitInquiry,
+} from "@/lib/submitInquiry";
 
 const field =
   "w-full rounded-md border border-[var(--border)] bg-[var(--bg)] px-3.5 py-2.5 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--accent)]";
@@ -29,6 +32,13 @@ export function ContactForm() {
       return;
     }
 
+    const category = String(data.get("category") || "").trim();
+    const mailbox = mailboxForInquiryCategory(category);
+    const fallbackEmail =
+      mailbox === "sales"
+        ? siteConfig.contact.salesEmail
+        : siteConfig.contact.email;
+
     try {
       await submitInquiry(
         {
@@ -36,12 +46,13 @@ export function ContactForm() {
           company: data.get("company"),
           email: data.get("email"),
           phone: data.get("phone"),
-          category: data.get("category"),
+          category,
           location: data.get("location"),
           message: data.get("message"),
           consent: data.get("consent") === "on",
         },
-        "SPAAVS contact inquiry",
+        `SPAAVS contact inquiry — ${category || "General"}`,
+        mailbox,
       );
 
       setStatus("success");
@@ -52,7 +63,7 @@ export function ContactForm() {
     } catch {
       setStatus("error");
       setMessage(
-        `We could not send your inquiry right now. Please email ${siteConfig.contact.email} or try again.`,
+        `We could not send your inquiry right now. Please email ${fallbackEmail} or try again.`,
       );
     }
   }
