@@ -43,25 +43,25 @@ export default function SolutionsPage() {
         title="Planned Platform Solutions"
         description="SPAAVS is designing an integrated commercial and technology platform. Capabilities below are planned and subject to validation, partnership readiness, and phased deployment."
       />
-      <div className="space-y-5">
+      <div className="space-y-0">
         {solutions.map((solution, index) => (
           <article
             key={solution.title}
-            className="border border-[var(--border)] p-6 md:p-8"
+            className="border-t border-[var(--border)] py-5 md:py-6"
           >
             <p className="text-xs uppercase tracking-[0.18em] text-[var(--tiffany)]">
               {String(index + 1).padStart(2, "0")} · Planned Capability
             </p>
-            <h2 className="mt-3 font-display text-2xl text-[var(--ink)]">
+            <h2 className="mt-2 font-display text-2xl text-[var(--ink)]">
               {solution.title}
             </h2>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
+            <p className="mt-2.5 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
               {solution.body}
             </p>
           </article>
         ))}
       </div>
-      <div className="mt-10">
+      <div className="mt-6 border-t border-[var(--border)] pt-6">
         <ButtonLink href="/how-it-works">See How It Works</ButtonLink>
       </div>
     </Section>

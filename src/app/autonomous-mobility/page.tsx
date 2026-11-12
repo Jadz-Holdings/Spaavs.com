@@ -34,18 +34,18 @@ export default function AutonomousMobilityPage() {
         facility partnerships, and validated technology capabilities.
       </p>
 
-      <div className="mt-12">
+      <div className="mt-7">
         <h2 className="font-display text-2xl text-[var(--ink)]">
           Development Focus
         </h2>
-        <p className="mt-2 text-sm text-[var(--ink-muted)]">
+        <p className="mt-1.5 text-sm text-[var(--ink-muted)]">
           Forward-looking opportunities · subject to validation
         </p>
-        <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-4 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
           {focus.map((item) => (
             <li
               key={item}
-              className="border border-[var(--border)] px-4 py-3 text-sm text-[var(--ink)]"
+              className="border border-[var(--border)] px-4 py-2.5 text-sm text-[var(--ink)]"
             >
               {item}
             </li>
@@ -53,14 +53,14 @@ export default function AutonomousMobilityPage() {
         </ul>
       </div>
 
-      <p className="mt-10 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
+      <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
         SPAAVS does not claim to currently operate autonomous vehicles,
         certified autonomous facilities, or production autonomous integrations.
         Autonomous mobility is a longer-term expansion path built on connected
         parking and facility partnerships.
       </p>
 
-      <div className="mt-8 flex flex-wrap gap-3">
+      <div className="mt-5 flex flex-wrap gap-3">
         <ButtonLink href="/contact">Explore Mobility Partnerships</ButtonLink>
         <ButtonLink href="/facility-partners" variant="secondary">
           Facility Partnerships

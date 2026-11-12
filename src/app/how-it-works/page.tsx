@@ -40,18 +40,18 @@ function Steps({
       <p className="mt-2 text-sm text-[var(--ink-muted)]">
         Proposed workflow · in development
       </p>
-      <ol className="mt-8 space-y-4">
+      <ol className="mt-5 space-y-0">
         {steps.map(([name, body], index) => (
           <li
             key={name}
-            className="grid gap-3 border border-[var(--border)] p-5 md:grid-cols-[5rem_1fr] md:items-start"
+            className="grid gap-1 border-t border-[var(--border)] py-4 md:grid-cols-[4.5rem_1fr] md:items-start md:gap-3"
           >
             <span className="font-display text-sm text-[var(--tiffany)]">
               Step {index + 1}
             </span>
             <div>
               <h3 className="text-lg text-[var(--ink)]">{name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[var(--ink-muted)]">
+              <p className="mt-1.5 text-sm leading-relaxed text-[var(--ink-muted)]">
                 {body}
               </p>
             </div>
@@ -71,11 +71,11 @@ export default function HowItWorksPage() {
           title="A Proposed Connected Experience"
           description="These workflows describe the intended SPAAVS experience for drivers and facility operators. They are proposed and remain in development."
         />
-        <div className="grid gap-14 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
           <Steps title="For Drivers" steps={driverSteps} />
           <Steps title="For Parking Facility Operators" steps={operatorSteps} />
         </div>
-        <div className="mt-12 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap gap-3">
           <ButtonLink href="/facility-partners">Become a Facility Partner</ButtonLink>
           <ButtonLink href="/solutions" variant="secondary">
             Review Solutions
