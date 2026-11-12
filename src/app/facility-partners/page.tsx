@@ -79,18 +79,18 @@ export default function FacilityPartnersPage() {
           {tiers.map((tier) => (
             <article
               key={tier.title}
-              className="border border-[var(--border)] p-6"
+              className="border border-[var(--border)] p-5"
             >
               <h3 className="font-display text-xl text-[var(--ink)]">
                 {tier.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--ink-muted)]">
+              <p className="mt-2.5 text-sm leading-relaxed text-[var(--ink-muted)]">
                 {tier.body}
               </p>
             </article>
           ))}
         </div>
-        <div className="mt-8">
+        <div className="mt-5">
           <ButtonLink href="#partnership-inquiry">
             Become a Facility Partner
           </ButtonLink>
@@ -102,7 +102,7 @@ export default function FacilityPartnersPage() {
           title="Partnership Inquiry"
           description="Tell us about your facility. Submissions are routed to the SPAAVS business contact workflow."
         />
-        <div className="max-w-3xl border border-[var(--border)] bg-[var(--bg)] p-6 md:p-8">
+        <div className="max-w-3xl border border-[var(--border)] bg-[var(--bg)] p-5 md:p-6">
           <PartnerForm />
         </div>
       </Section>

@@ -115,7 +115,7 @@ export default function HomePage() {
           title="Beyond Traditional Parking."
           description="Parking facilities represent more than places to store vehicles. They are existing infrastructure assets with the potential to support digital transactions, charging, vehicle services, fleet operations, and emerging mobility technologies."
         />
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2">
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
             SPAAVS aims to unlock this potential by connecting traditional
             parking facilities with intelligent software, service providers, and
@@ -135,16 +135,16 @@ export default function HomePage() {
           title="One Connected Mobility Ecosystem"
           description="A planned digital platform connecting the stakeholders that make parking and mobility infrastructure valuable."
         />
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           {audiences.map((item) => (
             <article
               key={item.title}
-              className="border border-[var(--border)] bg-[var(--bg)] p-6 transition duration-300 hover:border-[var(--accent-border)]"
+              className="border border-[var(--border)] bg-[var(--bg)] p-5 transition duration-300 hover:border-[var(--accent-border)]"
             >
               <h3 className="font-display text-xl text-[var(--ink)]">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
+              <p className="mt-2.5 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
                 {item.body}
               </p>
             </article>
@@ -158,17 +158,17 @@ export default function HomePage() {
           title="Core Platform Capabilities"
           description="Development-stage capabilities designed to extend parking infrastructure into a broader mobility service network."
         />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((item) => (
             <article
               key={item.title}
-              className="group border border-[var(--border)] p-6 transition duration-300 hover:border-[var(--accent-border)]"
+              className="group border border-[var(--border)] p-5 transition duration-300 hover:border-[var(--accent-border)]"
             >
-              <div className="mb-4 h-px w-10 bg-[var(--tiffany)] transition-all duration-300 group-hover:w-16" />
+              <div className="mb-3 h-px w-10 bg-[var(--tiffany)] transition-all duration-300 group-hover:w-16" />
               <h3 className="font-display text-lg text-[var(--ink)]">
                 {item.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--ink-muted)]">
+              <p className="mt-2.5 text-sm leading-relaxed text-[var(--ink-muted)]">
                 {item.body}
               </p>
             </article>
@@ -201,7 +201,7 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
-        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
+        <p className="mt-5 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
           The company&apos;s initial commercial opportunity centers on
           conventional parking, connected services, and facility partnerships.
           Pricing, volumes, and returns are not published while the platform
@@ -228,7 +228,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className="mt-8">
+        <div className="mt-5">
           <ButtonLink href="/solutions" variant="secondary">
             Explore Planned Solutions
           </ButtonLink>
@@ -292,7 +292,7 @@ export default function HomePage() {
           </div>
           <SocialLinks />
         </div>
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-6 flex flex-wrap gap-3">
           <ButtonLink href="/contact">Connect With SPAAVS</ButtonLink>
           <ButtonLink href="/facility-partners" variant="secondary">
             Become a Partner

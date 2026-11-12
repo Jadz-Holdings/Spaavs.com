@@ -20,7 +20,7 @@ export function Section({
 
   return (
     <section id={id} className={`relative ${toneClass} ${className}`}>
-      <div className="mx-auto w-full max-w-6xl px-5 py-16 md:px-8 md:py-24">
+      <div className="mx-auto w-full max-w-6xl px-5 py-10 md:px-8 md:py-14">
         {children}
       </div>
     </section>
@@ -40,7 +40,7 @@ export function SectionHeader({
 }) {
   const alignClass = align === "center" ? "mx-auto text-center items-center" : "";
   return (
-    <div className={`mb-10 flex max-w-3xl flex-col gap-4 md:mb-14 ${alignClass}`}>
+    <div className={`mb-6 flex max-w-3xl flex-col gap-2.5 md:mb-8 md:gap-3 ${alignClass}`}>
       {eyebrow ? (
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent)]">
           {eyebrow}

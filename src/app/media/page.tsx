@@ -64,11 +64,11 @@ export default function MediaPage() {
           title="Featured Updates"
           description="Official updates will appear here as they are approved for publication."
         />
-        <div className="border border-dashed border-[var(--border)] px-6 py-16 text-center">
+        <div className="border border-dashed border-[var(--border)] px-5 py-10 text-center md:py-12">
           <p className="text-sm uppercase tracking-[0.16em] text-[var(--ink-muted)]">
             No published updates yet
           </p>
-          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-[var(--ink-muted)]">
+          <p className="mx-auto mt-2.5 max-w-lg text-sm leading-relaxed text-[var(--ink-muted)]">
             This space is ready for company announcements, technology concepts,
             and verified video features. Until content is approved, follow
             @spaavs on official channels.
