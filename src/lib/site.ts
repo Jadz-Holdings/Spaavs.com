@@ -15,8 +15,10 @@ export const siteConfig = {
   contact: {
     phone: "(571) 628-2444",
     phoneHref: "tel:+15716282444",
-    email: "info@jadzholdings.com",
-    emailHref: "mailto:info@jadzholdings.com",
+    email: "info@spaavs.com",
+    emailHref: "mailto:info@spaavs.com",
+    salesEmail: "sales@spaavs.com",
+    salesEmailHref: "mailto:sales@spaavs.com",
     /** Public mailing address — confirm before treating as verified HQ. */
     addressLines: [
       "750 3rd St. NW, #304",
@@ -24,6 +26,16 @@ export const siteConfig = {
       "United States",
     ],
   },
+  /** Inquiry categories routed to sales@spaavs.com (product/service/partnership). */
+  salesInquiryCategories: [
+    "Parking Facility Partnership",
+    "Fleet Services",
+    "EV Charging Partnership",
+    "Vehicle-Service Provider",
+    "Autonomous Mobility Partnership",
+    "Technology Integration",
+    "Investment or Strategic Partnership",
+  ] as const,
   /**
    * Intended @spaavs profile URLs. Confirm ownership before treating as verified.
    * Set `enabled: false` to hide a network until confirmed.

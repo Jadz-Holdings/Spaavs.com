@@ -31,26 +31,30 @@ export default function ContactPage() {
                 A {siteConfig.parent} business
               </p>
             </div>
-            <p className="text-sm text-[var(--ink-muted)]">
-              Phone:{" "}
-              <a
-                className="text-[var(--ink)] hover:text-[var(--accent)]"
-                href={siteConfig.contact.phoneHref}
-              >
-                {siteConfig.contact.phone}
-              </a>
-            </p>
-            <p className="text-sm text-[var(--ink-muted)]">
-              Email:{" "}
-              <a
-                className="text-[var(--ink)] hover:text-[var(--accent)]"
-                href={siteConfig.contact.emailHref}
-              >
-                {siteConfig.contact.email}
-              </a>
-            </p>
-            <div className="text-sm leading-relaxed text-[var(--ink-muted)]">
-              <p className="mb-1 text-[var(--ink)]">Mailing address</p>
+            <div className="text-sm leading-none text-[var(--ink-muted)]">
+              <p>
+                Phone:{" "}
+                <a
+                  className="text-[var(--ink)] hover:text-[var(--accent)]"
+                  href={siteConfig.contact.phoneHref}
+                >
+                  {siteConfig.contact.phone}
+                </a>
+              </p>
+              <p>
+                Email:{" "}
+                <a
+                  className="text-[var(--ink)] hover:text-[var(--accent)]"
+                  href={siteConfig.contact.emailHref}
+                >
+                  {siteConfig.contact.email}
+                </a>
+              </p>
+            </div>
+            <div className="text-sm leading-none text-[var(--ink-muted)]">
+              <p className="mb-1 leading-normal text-[var(--ink)]">
+                Mailing address
+              </p>
               {siteConfig.contact.addressLines.map((line) => (
                 <p key={line}>{line}</p>
               ))}
