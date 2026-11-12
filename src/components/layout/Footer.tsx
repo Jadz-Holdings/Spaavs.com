@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { SpaavsLogo } from "@/components/brand/SpaavsLogo";
-import { SpaavsTagline } from "@/components/brand/SpaavsTagline";
 import { SocialLinks } from "@/components/brand/SocialLinks";
 import { siteConfig } from "@/lib/site";
 
@@ -16,22 +14,7 @@ const legal = [
 export function Footer() {
   return (
     <footer className="border-t border-[var(--border)] bg-[var(--bg)]">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-14 md:grid-cols-[1.2fr_1fr_1fr] md:px-8 md:py-16">
-        <div className="space-y-5">
-          <SpaavsLogo height={34} />
-          <p className="text-sm text-[var(--ink-muted)]">
-            {siteConfig.descriptor}
-          </p>
-          <SpaavsTagline size="sm" align="left" />
-          <p className="text-sm text-[var(--ink-muted)]">
-            A {siteConfig.parent} business
-          </p>
-          <p className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[var(--ink-muted)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--tiffany)]" />
-            {siteConfig.status}
-          </p>
-        </div>
-
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-10 sm:gap-12 sm:py-14 md:grid-cols-2 md:px-8 md:py-16">
         <div>
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.18em] text-[var(--ink)]">
             Navigate
