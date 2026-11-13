@@ -77,7 +77,7 @@ export default function HomePage() {
           aria-hidden
         />
 
-        <div className="relative mx-auto flex max-w-6xl flex-col justify-start px-5 pb-14 pt-6 sm:pb-16 sm:pt-10 md:min-h-[calc(100vh-4.25rem)] md:justify-center md:px-8 md:py-24">
+        <div className="relative mx-auto flex max-w-6xl flex-col px-5 pt-8 pb-10 sm:pt-10 sm:pb-12 md:px-8 md:pt-12 md:pb-14">
           <div className="max-w-3xl space-y-5 sm:space-y-7">
             <div className="reveal space-y-4 sm:space-y-5">
               <SpaavsTagline size="hero" align="left" asHeading />
@@ -109,10 +109,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <Section>
+      <Section paddingClass="pt-10 pb-0 md:pt-14 md:pb-0">
         <SectionHeader
           eyebrow="Infrastructure"
-          title="Beyond Traditional Parking."
+          title="Beyond Traditional Parking"
+          layout="split"
           description="Parking facilities represent more than places to store vehicles. They are existing infrastructure assets with the potential to support digital transactions, charging, vehicle services, fleet operations, and emerging mobility technologies."
         />
         <div className="grid gap-5 md:grid-cols-2">

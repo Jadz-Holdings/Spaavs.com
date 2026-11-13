@@ -37,28 +37,55 @@ export function SectionHeader({
   title,
   description,
   align = "left",
+  layout = "stack",
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
+  /** `split` places the description beside the title on desktop. */
+  layout?: "stack" | "split";
 }) {
   const alignClass = align === "center" ? "mx-auto text-center items-center" : "";
+  const eyebrowEl = eyebrow ? (
+    <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent)]">
+      {eyebrow}
+    </p>
+  ) : null;
+  const titleEl = (
+    <h2
+      className={`font-display leading-tight text-[var(--ink)] ${
+        layout === "split"
+          ? "text-3xl md:text-4xl"
+          : "text-3xl md:text-4xl lg:text-[2.75rem]"
+      }`}
+    >
+      {title}
+    </h2>
+  );
+  const descriptionEl = description ? (
+    <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+      {description}
+    </p>
+  ) : null;
+
+  if (layout === "split") {
+    return (
+      <div className={`mb-6 md:mb-8 ${alignClass}`}>
+        {eyebrowEl}
+        <div className="mt-2.5 flex flex-col gap-4 md:mt-3 md:flex-row md:items-start md:gap-10">
+          <div className="md:max-w-xl md:shrink-0">{titleEl}</div>
+          {descriptionEl}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={`mb-6 flex max-w-3xl flex-col gap-2.5 md:mb-8 md:gap-3 ${alignClass}`}>
-      {eyebrow ? (
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent)]">
-          {eyebrow}
-        </p>
-      ) : null}
-      <h2 className="font-display text-3xl leading-tight text-[var(--ink)] md:text-4xl lg:text-[2.75rem]">
-        {title}
-      </h2>
-      {description ? (
-        <p className="max-w-2xl text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-          {description}
-        </p>
-      ) : null}
+      {eyebrowEl}
+      {titleEl}
+      {descriptionEl ? <div className="max-w-2xl">{descriptionEl}</div> : null}
     </div>
   );
 }
