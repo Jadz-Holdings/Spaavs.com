@@ -1,24 +1,18 @@
 import { siteConfig } from "@/lib/site";
+import { mailboxAddress, type MailboxId } from "@/lib/mailboxes";
 
-export type InquiryMailbox = "info" | "sales";
-
-function resolveDestination(mailbox: InquiryMailbox = "info"): string {
-  return mailbox === "sales"
-    ? siteConfig.contact.salesEmail
-    : siteConfig.contact.email;
-}
+export type InquiryMailbox = MailboxId;
 
 /**
  * Inquiry delivery for static Firebase Hosting via FormSubmit.
- * - General / media inquiries → info@spaavs.com
- * - Product, service, and partnership inquiries → sales@spaavs.com
+ * Destination mailboxes are decoded at request time, not rendered in HTML.
  */
 export async function submitInquiry(
   payload: Record<string, unknown>,
   subject: string,
   mailbox: InquiryMailbox = "info",
 ): Promise<void> {
-  const destination = resolveDestination(mailbox);
+  const destination = mailboxAddress(mailbox);
   const res = await fetch(`https://formsubmit.co/ajax/${destination}`, {
     method: "POST",
     headers: {

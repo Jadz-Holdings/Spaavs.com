@@ -91,8 +91,12 @@ const organizationJsonLd = {
     "@type": "Organization",
     name: siteConfig.parent,
   },
-  email: siteConfig.contact.email,
   telephone: "+1-571-628-2444",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    url: `${siteConfig.url}/contact`,
+  },
   sameAs: socialSameAs,
   address: {
     "@type": "PostalAddress",
