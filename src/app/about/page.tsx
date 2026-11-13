@@ -31,9 +31,6 @@ export default function AboutPage() {
             services.
           </p>
         </div>
-        <p className="mt-5 border border-[var(--border)] px-5 py-3 text-sm text-[var(--ink)]">
-          SPAAVS is part of the {siteConfig.parent} business portfolio.
-        </p>
       </Section>
 
       <Section tone="soft">
