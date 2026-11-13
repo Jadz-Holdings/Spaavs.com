@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ObfuscatedEmail } from "@/components/contact/ObfuscatedEmail";
 import { Section, SectionHeader } from "@/components/ui/Section";
 import { siteConfig } from "@/lib/site";
 
@@ -38,12 +39,7 @@ export default function PrivacyPage() {
         </p>
         <p>
           You may contact us at{" "}
-          <a
-            className="text-[var(--ink)] hover:text-[var(--accent)]"
-            href={siteConfig.contact.emailHref}
-          >
-            {siteConfig.contact.email}
-          </a>{" "}
+          <ObfuscatedEmail className="text-[var(--ink)] hover:text-[var(--accent)]" />{" "}
           or {siteConfig.contact.phone} for privacy-related requests.
         </p>
         <p>

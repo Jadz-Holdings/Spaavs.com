@@ -34,10 +34,6 @@ export function ContactForm() {
 
     const category = String(data.get("category") || "").trim();
     const mailbox = mailboxForInquiryCategory(category);
-    const fallbackEmail =
-      mailbox === "sales"
-        ? siteConfig.contact.salesEmail
-        : siteConfig.contact.email;
 
     try {
       await submitInquiry(
@@ -63,7 +59,7 @@ export function ContactForm() {
     } catch {
       setStatus("error");
       setMessage(
-        `We could not send your inquiry right now. Please email ${fallbackEmail} or try again.`,
+        "We could not send your inquiry right now. Please use Email SPAAVS on this page, or try again.",
       );
     }
   }

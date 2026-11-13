@@ -65,7 +65,7 @@ export function PartnerForm() {
     } catch {
       setStatus("error");
       setMessage(
-        `We could not send your inquiry right now. Please email ${siteConfig.contact.salesEmail}.`,
+        "We could not send your inquiry right now. Please use Email SPAAVS on the Contact page, or try again.",
       );
     }
   }

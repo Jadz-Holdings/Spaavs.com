@@ -15,10 +15,7 @@ export const siteConfig = {
   contact: {
     phone: "(571) 628-2444",
     phoneHref: "tel:+15716282444",
-    email: "info@spaavs.com",
-    emailHref: "mailto:info@spaavs.com",
-    salesEmail: "sales@spaavs.com",
-    salesEmailHref: "mailto:sales@spaavs.com",
+    /** Mailboxes are obfuscated in `@/lib/mailboxes` — do not put addresses here. */
     /** Public mailing address — confirm before treating as verified HQ. */
     addressLines: [
       "750 3rd St. NW, #304",
@@ -26,7 +23,7 @@ export const siteConfig = {
       "United States",
     ],
   },
-  /** Inquiry categories routed to sales@spaavs.com (product/service/partnership). */
+  /** Inquiry categories routed to the sales mailbox (product/service/partnership). */
   salesInquiryCategories: [
     "Parking Facility Partnership",
     "Fleet Services",

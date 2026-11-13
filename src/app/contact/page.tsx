@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { SocialLinks } from "@/components/brand/SocialLinks";
+import {
+  ObfuscatedEmail,
+  ObfuscatedEmailButton,
+} from "@/components/contact/ObfuscatedEmail";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section, SectionHeader } from "@/components/ui/Section";
@@ -43,12 +47,7 @@ export default function ContactPage() {
               </p>
               <p>
                 Email:{" "}
-                <a
-                  className="text-[var(--ink)] hover:text-[var(--accent)]"
-                  href={siteConfig.contact.emailHref}
-                >
-                  {siteConfig.contact.email}
-                </a>
+                <ObfuscatedEmail className="text-[var(--ink)] hover:text-[var(--accent)]" />
               </p>
             </div>
             <div className="text-sm leading-none text-[var(--ink-muted)]">
@@ -65,9 +64,7 @@ export default function ContactPage() {
                 Contact actions
               </p>
               <div className="flex flex-wrap gap-2">
-                <ButtonLink href={siteConfig.contact.emailHref} size="sm">
-                  Email SPAAVS
-                </ButtonLink>
+                <ObfuscatedEmailButton>Email SPAAVS</ObfuscatedEmailButton>
                 <ButtonLink
                   href={siteConfig.contact.phoneHref}
                   variant="secondary"
