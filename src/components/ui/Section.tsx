@@ -5,11 +5,14 @@ export function Section({
   className = "",
   id,
   tone = "default",
+  paddingClass = "py-10 md:py-14",
 }: {
   children: ReactNode;
   className?: string;
   id?: string;
   tone?: "default" | "soft" | "contrast";
+  /** Replaces the default vertical padding on the inner container. */
+  paddingClass?: string;
 }) {
   const toneClass =
     tone === "soft"
@@ -20,7 +23,9 @@ export function Section({
 
   return (
     <section id={id} className={`relative ${toneClass} ${className}`}>
-      <div className="mx-auto w-full max-w-6xl px-5 py-10 md:px-8 md:py-14">
+      <div
+        className={`mx-auto w-full max-w-6xl px-5 md:px-8 ${paddingClass}`}
+      >
         {children}
       </div>
     </section>

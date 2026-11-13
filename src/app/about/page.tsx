@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Section>
+      <Section paddingClass="pt-10 pb-0 md:pt-14 md:pb-0">
         <SectionHeader
           eyebrow="About SPAAVS"
           title="Building the Infrastructure for Connected Mobility"
@@ -33,7 +33,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section tone="soft">
+      <Section tone="soft" paddingClass="pt-6 pb-10 md:pt-8 md:pb-14">
         <div className="grid gap-5 md:grid-cols-3">
           {[
             {
