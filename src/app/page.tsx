@@ -113,7 +113,6 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Infrastructure"
           title="Beyond Traditional Parking"
-          layout="split"
           description="Parking facilities represent more than places to store vehicles. They are existing infrastructure assets with the potential to support digital transactions, charging, vehicle services, fleet operations, and emerging mobility technologies."
         />
         <div className="grid gap-5 md:grid-cols-2">
