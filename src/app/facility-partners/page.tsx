@@ -6,38 +6,33 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Facility Partners",
   description:
-    "Explore SPAAVS partnership opportunities for parking operators and property owners. Proposed four-tier facility development model.",
+    "Join the SPAAVS Four-Tier Facility Development Model. Facilities can start at the appropriate capability level and upgrade as demand warrants.",
 };
-
-const opportunities = [
-  "Parking discovery and reservations",
-  "Facility inventory coordination",
-  "Digital transaction management",
-  "EV charging integration",
-  "Vehicle-service marketplace participation",
-  "Fleet-oriented parking services",
-  "Operational reporting",
-  "Technology integrations",
-  "Future autonomous-ready capabilities",
-];
 
 const tiers = [
   {
     title: "Tier 1 — SPAAVS Connected",
-    body: "Parking discovery, reservations, digital transactions, and basic facility reporting.",
+    body: "Parking discovery, reservations, digital payments, inventory coordination and facility reporting.",
   },
   {
     title: "Tier 2 — SPAAVS Smart Services",
-    body: "Connected parking with eligible charging, cleaning, inspections, and other coordinated vehicle services.",
+    body: "Real-time parking availability, integrated vehicle identification, indoor navigation, charging, detailing and inspection services.",
   },
   {
     title: "Tier 3 — SPAAVS Autonomous Ready",
-    body: "Facilities with validated capabilities for compatible autonomous vehicle access, staging, charging, and fleet workflows.",
+    body: "Compatible autonomous vehicle access, physical tracking, authorized navigation integration, fleet staging and charging.",
   },
   {
     title: "Tier 4 — SPAAVS Mobility Hub",
-    body: "Advanced locations supporting integrated parking, vehicle services, fleet operations, and multiple mobility technologies.",
+    body: "Overnight Fleet Bases, Rapid Turnaround Hubs, charging, detailing, inspections, maintenance coordination and fleet readiness.",
   },
+];
+
+const progression = [
+  "Tier 1 uses existing compatible infrastructure.",
+  "Tier 2 adds Integrated LiDAR and Camera Infrastructure.",
+  "Tier 3 adds authorized fleet integration.",
+  "Tier 4 adds fleet servicing and charging.",
 ];
 
 export default function FacilityPartnersPage() {
@@ -46,40 +41,25 @@ export default function FacilityPartnersPage() {
       <Section>
         <SectionHeader
           eyebrow="Facility Partners"
-          title="Transform Your Parking Facility Into a Connected Mobility Asset"
-          description="SPAAVS aims to work with existing parking facility operators, commercial property owners, shopping centers, residential communities, and fleet-oriented facilities to create new service and technology opportunities."
+          title="Bring Your Facility Into Intelligent Mobility Infrastructure"
+          description="SPAAVS partners with parking operators and property owners to retrofit existing garages, lots, shopping centers, residential communities, and commercial properties."
         />
         <p className="max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
-          Our strategy is designed to connect existing infrastructure with
-          digital parking, vehicle services, charging, and future mobility
-          capabilities.
+          Facilities can join at the appropriate tier and upgrade as demand
+          warrants. These are capability levels, not certifications.
         </p>
       </Section>
 
       <Section tone="soft">
-        <SectionHeader title="Partnership Opportunities" />
-        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {opportunities.map((item) => (
-            <li
-              key={item}
-              className="border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
-      </Section>
-
-      <Section>
         <SectionHeader
           title="Four-Tier Facility Development Model"
-          description="A proposed framework for phased facility capability. These are not existing certifications or currently deployed facility ratings."
+          description="Each tier adds capability. A facility does not need to begin at Tier 4."
         />
         <div className="grid gap-4 md:grid-cols-2">
           {tiers.map((tier) => (
             <article
               key={tier.title}
-              className="border border-[var(--border)] p-5"
+              className="border border-[var(--border)] bg-[var(--bg)] p-5"
             >
               <h3 className="font-display text-xl text-[var(--ink)]">
                 {tier.title}
@@ -90,6 +70,16 @@ export default function FacilityPartnersPage() {
             </article>
           ))}
         </div>
+        <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+          {progression.map((item) => (
+            <li
+              key={item}
+              className="border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
         <div className="mt-5">
           <ButtonLink href="#partnership-inquiry">
             Become a Facility Partner
@@ -97,7 +87,7 @@ export default function FacilityPartnersPage() {
         </div>
       </Section>
 
-      <Section id="partnership-inquiry" tone="soft">
+      <Section id="partnership-inquiry">
         <SectionHeader
           title="Partnership Inquiry"
           description="Tell us about your facility. Submissions are routed to the SPAAVS business contact workflow."

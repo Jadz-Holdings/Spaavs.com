@@ -12,7 +12,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Connect with SPAAVS about facility partnerships, fleet services, EV charging, vehicle services, and connected mobility opportunities.",
+    "Connect with SPAAVS about facility partnerships, fleet services, EV charging, vehicle services, and intelligent mobility.",
 };
 
 export default function ContactPage() {
@@ -22,7 +22,7 @@ export default function ContactPage() {
         <SectionHeader
           eyebrow="Contact"
           title="Connect With SPAAVS"
-          description="Interested in becoming a facility partner, exploring fleet services, integrating vehicle-service solutions, or discussing connected mobility opportunities? SPAAVS welcomes inquiries from parking operators, property owners, technology providers, commercial fleets, and strategic partners."
+          description="Interested in becoming a facility partner, exploring fleet services, integrating vehicle services, or discussing intelligent mobility? SPAAVS welcomes inquiries from parking operators, property owners, technology providers, commercial fleets, and strategic partners."
         />
 
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
@@ -45,8 +45,7 @@ export default function ContactPage() {
                   {siteConfig.contact.phone}
                 </a>
               </p>
-              <p>
-                Email:{" "}
+              <p className="mt-2">
                 <ObfuscatedEmail className="text-[var(--ink)] hover:text-[var(--accent)]" />
               </p>
             </div>

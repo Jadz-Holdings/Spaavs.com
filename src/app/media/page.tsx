@@ -6,7 +6,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Media & Updates",
   description:
-    "Explore the SPAAVS vision for intelligent parking, connected mobility, vehicle services, and autonomous infrastructure.",
+    "Updates on SPAAVS intelligent parking, vehicle services, and autonomous mobility.",
 };
 
 const categories = [
@@ -18,7 +18,7 @@ const categories = [
   "Fleet Mobility",
   "Autonomous Infrastructure",
   "Partner Announcements",
-  "Video Demonstrations",
+  "Videos",
 ];
 
 export default function MediaPage() {
@@ -28,9 +28,9 @@ export default function MediaPage() {
         <SectionHeader
           eyebrow="Media"
           title="SPAAVS Media & Updates"
-          description="Explore the SPAAVS vision for intelligent parking, connected mobility, vehicle services, and autonomous infrastructure. Follow our development journey through videos, technology concepts, project updates, and announcements."
+          description="News and videos on intelligent parking, vehicle services, and autonomous mobility."
         />
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <ButtonLink
             href="https://www.youtube.com/@spaavs"
             target="_blank"
@@ -43,10 +43,7 @@ export default function MediaPage() {
       </Section>
 
       <Section tone="soft">
-        <SectionHeader
-          title="Content Categories"
-          description="Editorial categories for future CMS-managed updates. No invented articles, demonstrations, or partnership announcements are published here."
-        />
+        <SectionHeader title="Topics" />
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((category) => (
             <li
@@ -61,17 +58,15 @@ export default function MediaPage() {
 
       <Section>
         <SectionHeader
-          title="Featured Updates"
-          description="Official updates will appear here as they are approved for publication."
+          title="Updates"
+          description="Official updates will appear here as they are published."
         />
-        <div className="border border-dashed border-[var(--border)] px-5 py-10 text-center md:py-12">
+        <div className="border border-[var(--border)] px-5 py-10 text-center md:py-12">
           <p className="text-sm uppercase tracking-[0.16em] text-[var(--ink-muted)]">
-            No published updates yet
+            No updates yet
           </p>
           <p className="mx-auto mt-2.5 max-w-lg text-sm leading-relaxed text-[var(--ink-muted)]">
-            This space is ready for company announcements, technology concepts,
-            and verified video features. Until content is approved, follow
-            @spaavs on official channels.
+            Follow @spaavs for company announcements.
           </p>
         </div>
       </Section>

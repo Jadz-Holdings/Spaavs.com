@@ -1,23 +1,39 @@
 import type { Metadata } from "next";
+import { FacilityVisual } from "@/components/media/FacilityVisual";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section, SectionHeader } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
   title: "Autonomous Mobility",
   description:
-    "SPAAVS is exploring how connected parking facilities can support emerging autonomous mobility requirements through partnerships and validated technology capabilities.",
+    "Overnight Fleet Bases and Rapid Turnaround Hubs for authorized autonomous fleets. The vehicle manufacturer controls driving.",
 };
 
+const hubs = [
+  {
+    title: "Overnight Fleet Bases",
+    label: "Overnight Fleet Base",
+    variant: "base" as const,
+    body: "Long-duration parking, overnight charging, vehicle detailing, inspections, and preparation for the next operating cycle.",
+  },
+  {
+    title: "Rapid Turnaround Hubs",
+    label: "Rapid Turnaround Hub",
+    variant: "hub" as const,
+    body: "Short-duration parking, rapid charging, cleaning, inspections, and vehicle readiness services between commercial trips.",
+  },
+];
+
 const focus = [
-  "Autonomous vehicle facility access",
-  "Compatible vehicle identification",
+  "Authorized autonomous vehicle access",
+  "Physical tracking",
   "Fleet staging",
-  "EV charging coordination",
-  "Vehicle servicing and readiness",
-  "Facility-to-fleet integration",
-  "Operational reporting",
-  "Autonomous parking and valet integrations where validated",
-  "Future mobility hub operations",
+  "Charging",
+  "Detailing and inspections",
+  "Maintenance coordination",
+  "SPAAVS Fleet API",
+  "Assigned bays",
+  "Fleet readiness",
 ];
 
 export default function AutonomousMobilityPage() {
@@ -25,22 +41,33 @@ export default function AutonomousMobilityPage() {
     <Section>
       <SectionHeader
         eyebrow="Autonomous Mobility"
-        title="Preparing Parking Infrastructure for Autonomous Mobility"
-        description="As autonomous transportation evolves, parking facilities may become important infrastructure for vehicle staging, charging, servicing, and fleet readiness."
+        title="SPAAVS Autonomous-ready Facilities"
+        description="SPAAVS Autonomous-ready Facilities and SPAAVS Mobility Hubs are planned capability levels for fleets. They are not certifications."
       />
       <p className="max-w-3xl text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-        SPAAVS is exploring how connected parking facilities can support
-        emerging autonomous mobility requirements through software integration,
-        facility partnerships, and validated technology capabilities.
+        Compatible vehicles use authorized fleet interfaces. The manufacturer
+        controls driving. SPAAVS coordinates access, the assigned bay, charging,
+        and readiness services.
       </p>
 
-      <div className="mt-7">
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
+        {hubs.map((hub) => (
+          <article key={hub.title} className="border border-[var(--border)] p-4">
+            <FacilityVisual label={hub.label} variant={hub.variant} />
+            <h2 className="mt-4 font-display text-2xl text-[var(--ink)]">
+              {hub.title}
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
+              {hub.body}
+            </p>
+          </article>
+        ))}
+      </div>
+
+      <div className="mt-8">
         <h2 className="font-display text-2xl text-[var(--ink)]">
           Development Focus
         </h2>
-        <p className="mt-1.5 text-sm text-[var(--ink-muted)]">
-          Forward-looking opportunities · subject to validation
-        </p>
         <ul className="mt-4 grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
           {focus.map((item) => (
             <li
@@ -54,10 +81,8 @@ export default function AutonomousMobilityPage() {
       </div>
 
       <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
-        SPAAVS does not claim to currently operate autonomous vehicles,
-        certified autonomous facilities, or production autonomous integrations.
-        Autonomous mobility is a longer-term expansion path built on connected
-        parking and facility partnerships.
+        SPAAVS does not operate autonomous vehicles. The manufacturer controls
+        driving. Facility tiers are capability levels, not certifications.
       </p>
 
       <div className="mt-5 flex flex-wrap gap-3">

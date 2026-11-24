@@ -13,8 +13,8 @@ export const siteConfig = {
   handle: "@spaavs",
   url: "https://spaavs.com",
   contact: {
-    phone: "(571) 628-2444",
-    phoneHref: "tel:+15716282444",
+    phone: "(771) - 271 - 9967",
+    phoneHref: "tel:+17712719967",
     /** Mailboxes are obfuscated in `@/lib/mailboxes` — do not put addresses here. */
     /** Public mailing address — confirm before treating as verified HQ. */
     addressLines: [

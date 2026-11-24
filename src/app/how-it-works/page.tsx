@@ -5,24 +5,36 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "A step-by-step view of the proposed SPAAVS experience for drivers and parking facility operators. Workflows are in development.",
+    "How drivers use the SPAAVS Mobile App, and how fleets use SPAAVS Mobile Hub and the SPAAVS Fleet API. Workflows are in development.",
 };
 
 const driverSteps = [
-  ["Discover", "Find participating parking facilities near a destination."],
-  ["Select", "Review available parking options and eligible services."],
-  ["Reserve", "Choose a parking space or eligible service where reservations are supported."],
-  ["Arrive", "Use supported facility access and identification workflows."],
-  ["Access Services", "Request participating charging, cleaning, or vehicle services when available."],
-  ["Pay", "Manage eligible transactions through the planned SPAAVS billing experience."],
+  ["Discover", "Find parking with the SPAAVS Mobile App."],
+  ["Reserve", "Reserve parking at a participating facility."],
+  [
+    "Arrive",
+    "Verify access on arrival. Entry uses the reservation and authorized credentials. A license plate alone is not authorization.",
+  ],
+  ["Navigate", "Receive an indoor route to the assigned available bay."],
+  ["Request services", "Request eligible charging, detailing, or inspection services."],
+  ["Pay and exit", "Pay for eligible parking and services, then exit."],
 ];
 
-const operatorSteps = [
-  ["Connect", "Explore partnership opportunities with SPAAVS."],
-  ["Assess", "Evaluate facility infrastructure, technical compatibility, and commercial opportunities."],
-  ["Integrate", "Plan appropriate digital parking, service, and facility integrations."],
-  ["Expand", "Introduce eligible services in phases based on demand and facility readiness."],
-  ["Optimize", "Use available operational reporting and commercial insights to improve performance."],
+const fleetSteps = [
+  [
+    "Coordinate",
+    "SPAAVS Mobile Hub and the SPAAVS Fleet API coordinate the visit.",
+  ],
+  ["Authorize", "Authorized access is confirmed before the vehicle enters."],
+  ["Assign", "The facility assigns an available bay."],
+  [
+    "Prepare",
+    "Charging and readiness services are coordinated at the bay.",
+  ],
+  [
+    "Drive",
+    "The vehicle controls its own motion. The manufacturer controls driving.",
+  ],
 ];
 
 function Steps({
@@ -37,9 +49,6 @@ function Steps({
       <h2 className="font-display text-2xl text-[var(--ink)] md:text-3xl">
         {title}
       </h2>
-      <p className="mt-2 text-sm text-[var(--ink-muted)]">
-        Proposed workflow · in development
-      </p>
       <ol className="mt-5 space-y-0">
         {steps.map(([name, body], index) => (
           <li
@@ -64,24 +73,26 @@ function Steps({
 
 export default function HowItWorksPage() {
   return (
-    <>
-      <Section>
-        <SectionHeader
-          eyebrow="How It Works"
-          title="A Proposed Connected Experience"
-          description="These workflows describe the intended SPAAVS experience for drivers and facility operators. They are proposed and remain in development."
-        />
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
-          <Steps title="For Drivers" steps={driverSteps} />
-          <Steps title="For Parking Facility Operators" steps={operatorSteps} />
-        </div>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <ButtonLink href="/facility-partners">Become a Facility Partner</ButtonLink>
-          <ButtonLink href="/solutions" variant="secondary">
-            Review Solutions
-          </ButtonLink>
-        </div>
-      </Section>
-    </>
+    <Section>
+      <SectionHeader
+        eyebrow="How It Works"
+        title="Drivers and Fleets"
+        description="Human drivers use the SPAAVS Mobile App. Fleets use SPAAVS Mobile Hub and the SPAAVS Fleet API. These workflows are in development."
+      />
+      <p className="mb-8 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
+        Use the SPAAVS Mobile App only when it is safe to do so. Do not
+        manually operate a mobile device while driving.
+      </p>
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
+        <Steps title="Human driver" steps={driverSteps} />
+        <Steps title="Fleet" steps={fleetSteps} />
+      </div>
+      <div className="mt-8 flex flex-wrap gap-3">
+        <ButtonLink href="/facility-partners">Become a Facility Partner</ButtonLink>
+        <ButtonLink href="/solutions" variant="secondary">
+          Review Solutions
+        </ButtonLink>
+      </div>
+    </Section>
   );
 }

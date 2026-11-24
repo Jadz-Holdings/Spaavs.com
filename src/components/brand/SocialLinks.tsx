@@ -25,15 +25,19 @@ const icons: Record<string, ReactNode> = {
 export function SocialLinks({
   className = "",
   size = "md",
+  nowrap = false,
 }: {
   className?: string;
   size?: "sm" | "md";
+  nowrap?: boolean;
 }) {
   const dim = size === "sm" ? "h-4 w-4" : "h-5 w-5";
   const pad = size === "sm" ? "p-1.5" : "p-2";
 
   return (
-    <ul className={`flex flex-wrap items-center gap-1 ${className}`}>
+    <ul
+      className={`flex items-center gap-1 ${nowrap ? "flex-nowrap" : "flex-wrap"} ${className}`}
+    >
       {siteConfig.social
         .filter((s) => s.enabled)
         .map((social) => (

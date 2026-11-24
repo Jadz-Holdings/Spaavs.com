@@ -25,23 +25,22 @@ const socialSameAs = siteConfig.social
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "SPAAVS | Smart Parking & Connected Mobility Infrastructure",
+    default: "SPAAVS | Intelligent Mobility Infrastructure",
     template: "%s | SPAAVS",
   },
   description:
-    "SPAAVS is developing a connected parking and mobility platform combining smart parking, vehicle services, EV charging coordination, fleet integrations, and future autonomous-ready infrastructure.",
+    "SPAAVS is developing intelligent parking infrastructure for human-driven vehicles, autonomous fleets, and integrated vehicle services.",
   applicationName: "SPAAVS",
   keywords: [
     "SPAAVS",
     "Smart Parking & Autonomous Vehicle Services",
     "smart parking technology",
-    "connected parking infrastructure",
+    "intelligent mobility infrastructure",
     "parking facility partnerships",
-    "EV charging coordination",
-    "vehicle-service marketplace",
-    "fleet parking solutions",
-    "autonomous-ready parking",
-    "connected mobility",
+    "SPAAVS Smart Parking Facilities",
+    "SPAAVS Autonomous-ready Facilities",
+    "Overnight Fleet Bases",
+    "Rapid Turnaround Hubs",
   ],
   authors: [{ name: "SPAAVS" }],
   openGraph: {
@@ -49,9 +48,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: "SPAAVS",
-    title: "SPAAVS | Smart Parking & Connected Mobility Infrastructure",
+    title: "SPAAVS | Intelligent Mobility Infrastructure",
     description:
-      "Developing connected parking, vehicle services, EV charging coordination, fleet integrations, and future autonomous-ready infrastructure.",
+      "Intelligent parking infrastructure for human-driven vehicles, autonomous fleets, and integrated vehicle services.",
     images: [
       {
         url: "/brand/og-spaavs.png",
@@ -63,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SPAAVS | Smart Parking & Connected Mobility Infrastructure",
+    title: "SPAAVS | Intelligent Mobility Infrastructure",
     description:
-      "A connected parking and mobility infrastructure platform in development.",
+      "Intelligent parking infrastructure for human-driven vehicles, autonomous fleets, and integrated vehicle services.",
     images: ["/brand/og-spaavs.png"],
   },
   icons: {
@@ -86,12 +85,12 @@ const organizationJsonLd = {
   url: siteConfig.url,
   logo: `${siteConfig.url}/brand/spaavs-wordmark-clean.png`,
   description:
-    "SPAAVS is developing a connected parking and mobility infrastructure platform.",
+    "SPAAVS is developing intelligent parking infrastructure for human-driven vehicles, autonomous fleets, and integrated vehicle services.",
   parentOrganization: {
     "@type": "Organization",
     name: siteConfig.parent,
   },
-  telephone: "+1-571-628-2444",
+  telephone: "+1-771-271-9967",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",

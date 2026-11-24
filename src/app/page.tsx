@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EcosystemGraphic } from "@/components/brand/EcosystemGraphic";
 import { SpaavsTagline } from "@/components/brand/SpaavsTagline";
 import { SocialLinks } from "@/components/brand/SocialLinks";
 import { ButtonLink } from "@/components/ui/Button";
@@ -8,56 +9,67 @@ import { siteConfig } from "@/lib/site";
 const audiences = [
   {
     title: "Drivers",
-    body: "Discover parking, reserve eligible spaces, access participating vehicle services, and manage transactions through a streamlined digital experience.",
+    body: "Discover and reserve parking in the SPAAVS Mobile App, verify access on arrival, and receive an indoor route to an assigned available bay.",
   },
   {
     title: "Parking Facility Operators",
-    body: "Improve facility utilization, manage digital parking transactions, coordinate services, and explore new revenue opportunities.",
+    body: "Join the Four-Tier Facility Development Model at the appropriate capability level and upgrade as demand warrants.",
   },
   {
     title: "Vehicle-Service Providers",
-    body: "Connect with participating parking facilities to provide eligible charging, cleaning, inspections, maintenance coordination, and other vehicle services.",
+    body: "Offer eligible charging, detailing, inspection, and maintenance coordination at participating facilities.",
   },
   {
     title: "Fleet & Mobility Operators",
-    body: "Explore coordinated parking, charging, servicing, vehicle readiness, reporting, and future autonomous mobility integrations.",
+    body: "Use SPAAVS Mobile Hub and the SPAAVS Fleet API to coordinate authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
   },
 ];
 
 const capabilities = [
   {
-    title: "Smart Parking",
-    body: "Parking discovery, availability information, reservations, and digital access workflows.",
+    title: "SPAAVS Smart Parking Facilities",
+    body: "Parking discovery, reservations, digital payments, inventory coordination, and facility reporting.",
   },
   {
-    title: "EV Charging",
-    body: "Charging discovery, availability coordination, and integration with compatible charging infrastructure.",
+    title: "Integrated LiDAR and Camera Infrastructure",
+    body: "Intelligent vehicle detection, license plate recognition, physical tracking, real-time parking availability, and indoor navigation.",
   },
   {
     title: "Vehicle Services",
-    body: "A marketplace for selected cleaning, inspection, maintenance coordination, and vehicle-care services.",
+    body: "Charging, detailing, inspections, and maintenance coordination at participating facilities.",
   },
   {
-    title: "Unified Billing",
-    body: "A planned platform for parking transactions, eligible services, charging, and fleet-related billing.",
+    title: "Intelligent Facility Access",
+    body: "Entry is verified against a reservation and authorized credentials. A license plate alone is not authorization.",
   },
   {
-    title: "Facility & Fleet Integrations",
-    body: "Connected facility systems, operational reporting, enterprise interfaces, and fleet-oriented workflows.",
+    title: "SPAAVS Mobile Hub",
+    body: "Fleet coordination for authorized access, assigned bays, charging, and vehicle readiness.",
   },
   {
-    title: "Autonomous Infrastructure",
-    body: "A phased roadmap for validated autonomous-ready parking locations and compatible mobility integrations.",
+    title: "SPAAVS Autonomous-ready Facilities",
+    body: "Authorized fleet interfaces for compatible vehicles. The manufacturer controls driving.",
   },
 ];
 
 const layers = [
-  "Consumer Experience Layer",
-  "Facility Integration Layer",
-  "Vehicle-Service Layer",
-  "Transaction Layer",
-  "Fleet Integration Layer",
-  "Autonomous Mobility Layer",
+  "SPAAVS Mobile App",
+  "Integrated LiDAR and Camera Infrastructure",
+  "Intelligent Facility Access",
+  "Real-Time Facility Intelligence",
+  "SPAAVS Mobile Hub and SPAAVS Fleet API",
+  "Autonomous Mobility Integration",
+];
+
+const commercial = [
+  "Parking transaction fees",
+  "Vehicle-service marketplace commissions",
+  "EV charging coordination",
+  "Fleet parking and readiness services",
+  "SPAAVS Mobile Hub",
+  "SPAAVS Fleet API integrations",
+  "Commercial facility partnerships",
+  "Autonomous mobility services as facilities upgrade",
 ];
 
 export default function HomePage() {
@@ -85,16 +97,15 @@ export default function HomePage() {
             </div>
             <div className="reveal reveal-delay-1 space-y-3 text-[0.95rem] leading-relaxed text-[var(--ink-muted)] sm:space-y-4 sm:text-lg">
               <p>
-                SPAAVS is developing a connected parking and mobility
-                infrastructure platform designed to transform existing parking
-                facilities into intelligent, revenue-generating service
-                locations.
+                SPAAVS is developing intelligent parking infrastructure designed
+                to support human-driven vehicles, autonomous fleets, and
+                integrated vehicle services.
               </p>
               <p>
-                By connecting drivers, parking operators, vehicle-service
-                providers, and commercial fleets, SPAAVS aims to create a unified
-                digital ecosystem for parking, vehicle services, and
-                next-generation mobility.
+                SPAAVS is a {siteConfig.parent} business. The strategy retrofits
+                existing parking garages and facilities, connecting drivers,
+                fleets, and vehicle services through Intelligent Mobility
+                Infrastructure.
               </p>
             </div>
             <div className="reveal reveal-delay-2 flex flex-col gap-3 pt-1 sm:flex-row sm:flex-wrap sm:pt-0">
@@ -113,18 +124,17 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Infrastructure"
           title="Beyond Traditional Parking"
-          description="Parking facilities represent more than places to store vehicles. They are existing infrastructure assets with the potential to support digital transactions, charging, vehicle services, fleet operations, and emerging mobility technologies."
+          description="Existing parking facilities can support digital access, charging, vehicle services, fleet readiness, and autonomous mobility without new garage construction."
         />
         <div className="grid gap-5 md:grid-cols-2">
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            SPAAVS aims to unlock this potential by connecting traditional
-            parking facilities with intelligent software, service providers, and
-            future autonomous-ready capabilities.
+            SPAAVS plans to equip participating garages and lots in phases,
+            from SPAAVS Connected facilities through SPAAVS Mobility Hubs.
           </p>
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            Through partnerships with existing parking operators and property
-            owners, SPAAVS intends to create new commercial opportunities while
-            improving the convenience and utility of parking infrastructure.
+            Partnerships with parking operators and property owners are how
+            the network grows. Facilities join at the appropriate tier and
+            upgrade as demand warrants.
           </p>
         </div>
       </Section>
@@ -133,9 +143,10 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Ecosystem"
           title="One Connected Mobility Ecosystem"
-          description="A planned digital platform connecting the stakeholders that make parking and mobility infrastructure valuable."
+          description="SPAAVS Mobile App, SPAAVS Mobile Hub, and SPAAVS Fleet API link SPAAVS Smart Parking Facilities and SPAAVS Autonomous-ready Facilities."
         />
-        <div className="grid gap-4 sm:grid-cols-2">
+        <EcosystemGraphic />
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {audiences.map((item) => (
             <article
               key={item.title}
@@ -156,7 +167,7 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Planned Capabilities"
           title="Core Platform Capabilities"
-          description="Development-stage capabilities designed to extend parking infrastructure into a broader mobility service network."
+          description="Development-stage capabilities for Intelligent Mobility Infrastructure."
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {capabilities.map((item) => (
@@ -180,19 +191,10 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Business Model"
           title="Unlocking More Value From Existing Parking Infrastructure"
-          description="SPAAVS is developing a business model that extends beyond conventional parking transactions. Autonomous mobility represents a longer-term expansion opportunity rather than a prerequisite for the initial commercial model."
+          description="The initial commercial opportunity is conventional parking, vehicle services, and facility partnerships. Autonomous mobility is a later expansion as facilities upgrade."
         />
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            "Parking transaction fees",
-            "Facility software subscriptions",
-            "Vehicle-service marketplace commissions",
-            "EV charging coordination",
-            "Fleet subscriptions",
-            "Enterprise integrations",
-            "Commercial facility partnerships",
-            "Future autonomous mobility services",
-          ].map((item) => (
+          {commercial.map((item) => (
             <li
               key={item}
               className="border border-[var(--border)] bg-[var(--bg)] px-4 py-3 text-sm text-[var(--ink)]"
@@ -202,10 +204,9 @@ export default function HomePage() {
           ))}
         </ul>
         <p className="mt-5 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
-          The company&apos;s initial commercial opportunity centers on
-          conventional parking, connected services, and facility partnerships.
-          Pricing, volumes, and returns are not published while the platform
-          remains in development.
+          Revenue is planned from eligible parking transactions, marketplace
+          commissions, charging coordination, and fleet readiness services.
+          Pricing is not published while the platform remains in development.
         </p>
       </Section>
 
@@ -213,7 +214,7 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Technology"
           title="Connected Infrastructure. Intelligent Operations."
-          description="A minimalist view of six planned technology layers. These are conceptual architecture targets—not completed production infrastructure."
+          description="Planned layers of Intelligent Mobility Infrastructure. These capabilities are in development."
         />
         <div className="grid gap-3">
           {layers.map((layer, index) => (
@@ -241,14 +242,8 @@ export default function HomePage() {
             <SectionHeader
               eyebrow="YouTube"
               title="Discover the Future of Mobility"
-              description="Follow SPAAVS on YouTube as we explore intelligent parking, connected vehicle services, EV charging, autonomous mobility, and the transformation of traditional parking infrastructure."
+              description="Follow SPAAVS on YouTube for intelligent parking, vehicle services, EV charging, and autonomous mobility."
             />
-            <p className="mb-6 max-w-2xl text-sm leading-relaxed text-[var(--ink-muted)]">
-              Discover our vision, technology concepts, development updates, and
-              the future of connected mobility. Featured videos can be curated
-              through the Media & Updates workspace as official content becomes
-              available.
-            </p>
             <ButtonLink
               href="https://www.youtube.com/@spaavs"
               target="_blank"
@@ -264,14 +259,9 @@ export default function HomePage() {
                 YouTube · {siteConfig.handle}
               </p>
               <p className="max-w-sm text-sm text-[var(--ink-muted)]">
-                Official videos will be featured here after channel confirmation.
-                No placeholder demos are shown.
+                Official videos will appear here as they are published.
               </p>
             </div>
-            <p className="mt-3 text-xs text-[var(--ink-muted)]">
-              Confirm the official YouTube URL for {siteConfig.handle} before
-              publication.
-            </p>
           </div>
         </div>
       </Section>
@@ -286,8 +276,7 @@ export default function HomePage() {
               Follow {siteConfig.handle}
             </h2>
             <p className="mt-4 text-base text-[var(--ink-muted)]">
-              Official brand presence across YouTube, Instagram, Facebook,
-              TikTok, X, and LinkedIn — subject to account verification.
+              YouTube, Instagram, Facebook, TikTok, X, and LinkedIn.
             </p>
           </div>
           <SocialLinks />

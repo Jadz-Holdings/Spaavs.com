@@ -27,13 +27,16 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<ThemeId>("tiffany");
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY) as ThemeId | null;
-    if (stored === "tiffany" || stored === "mono" || stored === "dark") {
-      setThemeState(stored);
-      applyTheme(stored);
-    } else {
-      applyTheme("tiffany");
-    }
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    const frame = requestAnimationFrame(() => {
+      if (stored === "tiffany" || stored === "mono" || stored === "dark") {
+        setThemeState(stored);
+        applyTheme(stored);
+      } else {
+        applyTheme("tiffany");
+      }
+    });
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const setTheme = useCallback((next: ThemeId) => {

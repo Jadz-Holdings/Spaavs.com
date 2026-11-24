@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About SPAAVS",
   description:
-    "SPAAVS is a smart parking and mobility technology venture within the Jadz Holdings LLC business portfolio, developing connected parking infrastructure.",
+    "SPAAVS, a Jadz Holdings LLC business, is developing intelligent parking infrastructure for human-driven vehicles, autonomous fleets, and integrated vehicle services.",
 };
 
 export default function AboutPage() {
@@ -16,19 +16,19 @@ export default function AboutPage() {
       <Section paddingClass="pt-10 pb-0 md:pt-14 md:pb-0">
         <SectionHeader
           eyebrow="About SPAAVS"
-          title="Building the Infrastructure for Connected Mobility"
-          description="SPAAVS is a smart parking and mobility technology venture within the Jadz Holdings LLC business portfolio."
+          title="Intelligent Mobility Infrastructure"
+          description="SPAAVS is developing intelligent parking infrastructure designed to support human-driven vehicles, autonomous fleets, and integrated vehicle services."
         />
         <div className="grid gap-5 md:grid-cols-2">
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            The company is developing a connected platform designed to bring
-            together parking infrastructure, human drivers, vehicle-service
-            providers, commercial fleets, and emerging mobility technologies.
+            SPAAVS is a business within the {siteConfig.parent} portfolio. The
+            strategy retrofits existing parking garages, shopping centers,
+            residential facilities, and commercial properties.
           </p>
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            Its strategy centers on partnering with existing parking facilities
-            to expand their commercial potential through intelligent digital
-            services.
+            SPAAVS Mobile App, SPAAVS Mobile Hub, and the SPAAVS Fleet API
+            connect SPAAVS Smart Parking Facilities and SPAAVS Autonomous-ready
+            Facilities. New garage construction is not the plan.
           </p>
         </div>
       </Section>
@@ -38,18 +38,21 @@ export default function AboutPage() {
           {[
             {
               title: "Our Mission",
-              body: "To modernize parking infrastructure by connecting facilities, vehicles, services, and mobility operators through intelligent technology.",
+              body: "Modernize existing parking infrastructure so facilities, vehicles, services, and mobility operators can work through one intelligent platform.",
             },
             {
               title: "Our Vision",
-              body: "To create a scalable network of connected mobility locations serving today's drivers and tomorrow's autonomous transportation systems.",
+              body: "A network of SPAAVS Smart Parking Facilities and SPAAVS Autonomous-ready Facilities serving today's drivers and autonomous fleets.",
             },
             {
               title: "Our Approach",
-              body: "Work with existing parking garages, shopping centers, residential parking facilities, commercial properties, and other suitable operators—introducing connected services in phases.",
+              body: "Facilities join the Four-Tier Facility Development Model at the appropriate tier and upgrade as demand warrants. These are capability levels, not certifications.",
             },
           ].map((item) => (
-            <article key={item.title} className="border border-[var(--border)] bg-[var(--bg)] p-5">
+            <article
+              key={item.title}
+              className="border border-[var(--border)] bg-[var(--bg)] p-5"
+            >
               <h2 className="font-display text-xl text-[var(--ink)]">
                 {item.title}
               </h2>
@@ -59,17 +62,12 @@ export default function AboutPage() {
             </article>
           ))}
         </div>
-        <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
-          By introducing connected services and technology in phases, SPAAVS aims
-          to help participating facilities expand their capabilities without
-          requiring every location to become a fully autonomous mobility hub.
-        </p>
       </Section>
 
       <Section>
         <SectionHeader
           title="Official Profiles"
-          description={`Connect with ${siteConfig.handle} across verified social channels as accounts are confirmed.`}
+          description={`Connect with ${siteConfig.handle} on YouTube, Instagram, Facebook, TikTok, X, and LinkedIn.`}
         />
         <SocialLinks />
         <div className="mt-5 flex flex-wrap gap-3">

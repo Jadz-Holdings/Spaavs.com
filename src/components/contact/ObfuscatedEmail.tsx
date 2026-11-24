@@ -1,46 +1,35 @@
 "use client";
 
-import { useSyncExternalStore, type ReactNode } from "react";
-import {
-  mailboxAddress,
-  mailboxHref,
-  type MailboxId,
-} from "@/lib/mailboxes";
+import type { ReactNode } from "react";
+import { mailboxHref, type MailboxId } from "@/lib/mailboxes";
 import { Button } from "@/components/ui/Button";
 
-function subscribe() {
-  return () => {};
-}
-
-function useClientMailbox(id: MailboxId) {
-  return useSyncExternalStore(
-    subscribe,
-    () => mailboxAddress(id),
-    () => null,
-  );
+/**
+ * Opens the mailbox in the visitor's mail client.
+ * The address is decoded only inside the click handler, so it is not written
+ * into the HTML, the rendered text, or a mailto href that a crawler can read.
+ */
+function openMailbox(id: MailboxId) {
+  window.location.href = mailboxHref(id);
 }
 
 export function ObfuscatedEmail({
   mailbox = "info",
   className = "",
+  children = "Email SPAAVS",
 }: {
   mailbox?: MailboxId;
   className?: string;
+  children?: ReactNode;
 }) {
-  const address = useClientMailbox(mailbox);
-
-  if (!address) {
-    return (
-      <span className={className} aria-label="Email SPAAVS">
-        Email SPAAVS
-      </span>
-    );
-  }
-
   return (
-    <a className={className} href={`mailto:${address}`}>
-      {address}
-    </a>
+    <button
+      type="button"
+      className={`inline cursor-pointer border-0 bg-transparent p-0 text-left underline-offset-4 hover:underline ${className}`}
+      onClick={() => openMailbox(mailbox)}
+    >
+      {children}
+    </button>
   );
 }
 
@@ -60,9 +49,7 @@ export function ObfuscatedEmailButton({
       type="button"
       size={size}
       variant={variant}
-      onClick={() => {
-        window.location.href = mailboxHref(mailbox);
-      }}
+      onClick={() => openMailbox(mailbox)}
     >
       {children}
     </Button>

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Draft privacy policy for the SPAAVS corporate website.",
+  description: "Privacy policy for the SPAAVS corporate website.",
 };
 
 export default function PrivacyPage() {
@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <SectionHeader
         eyebrow="Legal"
         title="Privacy Policy"
-        description="Draft for review. This is not final counsel-approved legal advice."
+        description="How this website handles information you submit."
       />
       <div className="prose-spaavs max-w-3xl space-y-6 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
         <p>
@@ -29,9 +29,8 @@ export default function PrivacyPage() {
           opportunities.
         </p>
         <p>
-          We do not sell personal information. Inquiry data may be processed
-          using future email or CRM systems once configured. Unconfigured
-          integrations are not represented as active.
+          We do not sell personal information. Inquiry data is used to respond
+          to your request and to evaluate partnership or media opportunities.
         </p>
         <p>
           This website does not collect live consumer payment credentials and

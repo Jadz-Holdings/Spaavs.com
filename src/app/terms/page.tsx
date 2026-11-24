@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms of Use",
-  description: "Draft terms of use for the SPAAVS corporate website.",
+  description: "Terms of use for the SPAAVS corporate website.",
 };
 
 export default function TermsPage() {
@@ -14,20 +14,21 @@ export default function TermsPage() {
       <SectionHeader
         eyebrow="Legal"
         title="Terms of Use"
-        description="Draft for review. This is not final counsel-approved legal advice."
+        description="Terms that apply when you use this website."
       />
       <div className="max-w-3xl space-y-6 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
         <p>
-          By using this website, you agree to these draft terms. The site
-          provides general corporate information about SPAAVS and planned
-          platform capabilities.
+          By using this website, you agree to these terms. The site provides
+          general corporate information about SPAAVS and planned platform
+          capabilities.
         </p>
         <p>
           SPAAVS is {siteConfig.status.toLowerCase()}. Descriptions of
           solutions, workflows, facility tiers, and autonomous mobility
-          capabilities are forward-looking and may change. Nothing on this site
-          constitutes an offer of services, a partnership commitment, or a
-          guarantee of availability.
+          capabilities are forward-looking and may change. Facility tiers are
+          capability levels, not certifications. Nothing on this site is an
+          offer of services, a partnership commitment, a supplier agreement, or
+          a guarantee of availability.
         </p>
         <p>
           All SPAAVS branding, including the wordmark and Tiffany accent marks,

@@ -5,65 +5,100 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "Planned SPAAVS solutions spanning smart parking, connected driver experience, EV charging coordination, vehicle services, unified billing, and fleet services.",
+    "SPAAVS technology and infrastructure: Integrated LiDAR and Camera Infrastructure, intelligent facility access, real-time facility intelligence, and autonomous mobility integration.",
 };
 
-const solutions = [
+const technology = [
   {
-    title: "Smart Parking & Reservations",
-    body: "SPAAVS aims to simplify parking discovery and reservations by helping drivers identify participating parking locations, review availability, select services, and manage digital transactions.",
+    title: "Integrated LiDAR and Camera Infrastructure",
+    body: "Intelligent vehicle detection, license plate recognition, physical tracking, real-time parking availability, and indoor navigation. Detection supports the facility view. A license plate alone is not authorization.",
   },
   {
-    title: "Connected Driver Experience",
-    body: "The planned SPAAVS mobile experience should support convenient, safety-conscious interactions. A driver approaching a destination may use approved hands-free interactions or operate the application while safely parked. Where technically supported and authorized, Bluetooth and other compatible technologies may help facilitate identification or access-related workflows. Drivers should not manually operate mobile devices while driving.",
+    title: "Intelligent Facility Access",
+    body: "SPAAVS verifies the reservation and authorized credentials before entry. A license plate alone is not authorization.",
   },
   {
-    title: "EV Charging Coordination",
-    body: "Integrate eligible charging providers and participating charging facilities into the SPAAVS ecosystem. Planned capabilities may include charging discovery, service availability, scheduling, and coordinated billing.",
+    title: "Real-Time Facility Intelligence",
+    body: "Parking availability, vehicle movement, and utilization for participating facilities.",
   },
   {
-    title: "Vehicle-Service Marketplace",
-    body: "Enable qualified providers to offer eligible services at participating facilities, including vehicle cleaning, detailing, inspections, maintenance coordination, EV charging services, fleet readiness services, and other approved vehicle services.",
+    title: "Autonomous Mobility Integration",
+    body: "Compatible vehicles connect through authorized fleet interfaces. The vehicle manufacturer controls driving. SPAAVS coordinates access, the assigned bay, and facility services.",
+  },
+];
+
+const platform = [
+  {
+    title: "SPAAVS Mobile App",
+    body: "Human drivers discover and reserve parking, verify access on arrival, follow an indoor route to an assigned available bay, request eligible services, pay, and exit.",
   },
   {
-    title: "Unified Payments & Billing",
-    body: "Develop a streamlined transaction experience that can support parking, eligible vehicle services, charging, invoices, receipts, and future fleet accounts. Live payments are not enabled on this corporate site.",
+    title: "SPAAVS Mobile Hub and SPAAVS Fleet API",
+    body: "Fleet systems coordinate authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
   },
   {
-    title: "Fleet Services",
-    body: "Explore enterprise capabilities for commercial fleet operators, including parking coordination, service scheduling, charging, reporting, and compatible fleet integrations.",
+    title: "EV Charging and Vehicle Services",
+    body: "Participating facilities can offer charging, detailing, inspections, and maintenance coordination alongside parking.",
+  },
+  {
+    title: "Digital Payments",
+    body: "Eligible parking and service payments are part of the planned platform. This corporate website does not process live payments.",
   },
 ];
 
 export default function SolutionsPage() {
   return (
-    <Section>
-      <SectionHeader
-        eyebrow="Solutions"
-        title="Planned Platform Solutions"
-        description="SPAAVS is designing an integrated commercial and technology platform. Capabilities below are planned and subject to validation, partnership readiness, and phased deployment."
-      />
-      <div className="space-y-0">
-        {solutions.map((solution, index) => (
-          <article
-            key={solution.title}
-            className="border-t border-[var(--border)] py-5 md:py-6"
-          >
-            <p className="text-xs uppercase tracking-[0.18em] text-[var(--tiffany)]">
-              {String(index + 1).padStart(2, "0")} · Planned Capability
-            </p>
-            <h2 className="mt-2 font-display text-2xl text-[var(--ink)]">
-              {solution.title}
-            </h2>
-            <p className="mt-2.5 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
-              {solution.body}
-            </p>
-          </article>
-        ))}
-      </div>
-      <div className="mt-6 border-t border-[var(--border)] pt-6">
-        <ButtonLink href="/how-it-works">See How It Works</ButtonLink>
-      </div>
-    </Section>
+    <>
+      <Section>
+        <SectionHeader
+          eyebrow="Solutions"
+          title="Technology and Infrastructure"
+          description="SPAAVS is designing Intelligent Mobility Infrastructure for existing parking facilities. The capabilities below are in development."
+        />
+        <div>
+          {technology.map((item, index) => (
+            <article
+              key={item.title}
+              className="border-t border-[var(--border)] py-5 md:py-6"
+            >
+              <p className="text-xs uppercase tracking-[0.18em] text-[var(--tiffany)]">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <h2 className="mt-2 font-display text-2xl text-[var(--ink)]">
+                {item.title}
+              </h2>
+              <p className="mt-2.5 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
+                {item.body}
+              </p>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="soft">
+        <SectionHeader
+          title="Platform Services"
+          description="Software that connects drivers, facilities, vehicle services, and fleets."
+        />
+        <div>
+          {platform.map((item) => (
+            <article
+              key={item.title}
+              className="border-t border-[var(--border)] py-5 md:py-6"
+            >
+              <h2 className="font-display text-2xl text-[var(--ink)]">
+                {item.title}
+              </h2>
+              <p className="mt-2.5 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
+                {item.body}
+              </p>
+            </article>
+          ))}
+        </div>
+        <div className="mt-6">
+          <ButtonLink href="/how-it-works">See How It Works</ButtonLink>
+        </div>
+      </Section>
+    </>
   );
 }

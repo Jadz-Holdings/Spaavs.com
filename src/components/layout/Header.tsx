@@ -10,11 +10,8 @@ import { siteConfig } from "@/lib/site";
 
 export function Header() {
   const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+  const [openPath, setOpenPath] = useState<string | null>(null);
+  const open = openPath === pathname;
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -25,23 +22,53 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[color:var(--bg)/0.92] backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 md:h-[4.25rem] md:px-8">
-        <Link
-          href="/"
-          className="inline-flex shrink-0 items-center"
-          aria-label="SPAAVS home"
-        >
-          {/* Single wordmark — avoids duplicate logos when Tailwind display utilities conflict */}
-          <SpaavsLogo
-            height={32}
-            priority
-            className="inline-flex items-center"
-            heightClassName="h-7 md:h-8"
-          />
-        </Link>
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
+        <div className="flex h-16 items-center justify-between gap-4 md:h-[4.25rem]">
+          <Link
+            href="/"
+            className="inline-flex min-w-0 shrink items-center"
+            aria-label="SPAAVS home"
+          >
+            <SpaavsLogo
+              height={32}
+              priority
+              className="inline-flex items-center"
+              heightClassName="h-7 md:h-8"
+            />
+          </Link>
+
+          <div className="hidden shrink-0 items-center gap-3 lg:flex">
+            <SocialLinks size="sm" nowrap />
+            <ButtonLink href="/facility-partners" size="sm">
+              Become a Partner
+            </ButtonLink>
+          </div>
+
+          <button
+            type="button"
+            className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-[var(--border)] text-[var(--ink)] lg:hidden"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpenPath(open ? null : pathname)}
+          >
+            <span className="sr-only">Menu</span>
+            <span className="flex w-4 flex-col gap-1.5" aria-hidden>
+              <span
+                className={`h-px w-full bg-current transition ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+              />
+              <span
+                className={`h-px w-full bg-current transition ${open ? "opacity-0" : ""}`}
+              />
+              <span
+                className={`h-px w-full bg-current transition ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+              />
+            </span>
+          </button>
+        </div>
 
         <nav
-          className="hidden items-center gap-5 lg:flex xl:gap-6"
+          className="hidden flex-wrap items-center gap-x-4 gap-y-2 border-t border-[var(--border)] py-3 lg:flex"
           aria-label="Primary"
         >
           {siteConfig.nav.map((item) => {
@@ -53,7 +80,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-[0.72rem] uppercase tracking-[0.12em] transition-colors ${
+                className={`text-[0.72rem] uppercase tracking-[0.1em] transition-colors ${
                   active
                     ? "text-[var(--accent)]"
                     : "text-[var(--ink)] hover:text-[var(--accent)]"
@@ -64,40 +91,16 @@ export function Header() {
             );
           })}
         </nav>
-
-        <div className="hidden items-center gap-3 lg:flex">
-          <SocialLinks size="sm" className="hidden xl:flex" />
-          <ButtonLink href="/facility-partners" size="sm">
-            Become a Partner
-          </ButtonLink>
-        </div>
-
-        <button
-          type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-[var(--border)] text-[var(--ink)] lg:hidden"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className="sr-only">Menu</span>
-          <span className="flex w-4 flex-col gap-1.5" aria-hidden>
-            <span
-              className={`h-px w-full bg-current transition ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
-            />
-            <span className={`h-px w-full bg-current transition ${open ? "opacity-0" : ""}`} />
-            <span
-              className={`h-px w-full bg-current transition ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
-            />
-          </span>
-        </button>
       </div>
 
       <div
         id="mobile-nav"
-        className={`border-t border-[var(--border)] bg-[var(--bg)] lg:hidden ${open ? "block" : "hidden"}`}
+        className={`absolute inset-x-0 top-full max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-[var(--border)] bg-[var(--bg)] md:max-h-[calc(100dvh-4.25rem)] lg:hidden ${open ? "block" : "hidden"}`}
       >
-        <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4" aria-label="Mobile">
+        <nav
+          className="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4"
+          aria-label="Mobile"
+        >
           {siteConfig.nav.map((item) => (
             <Link
               key={item.href}

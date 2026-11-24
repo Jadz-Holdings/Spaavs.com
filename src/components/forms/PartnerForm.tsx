@@ -9,15 +9,14 @@ const field =
   "w-full rounded-md border border-[var(--border)] bg-[var(--bg)] px-3.5 py-2.5 text-sm text-[var(--ink)] outline-none transition focus:border-[var(--accent)]";
 
 const interests = [
-  "Parking discovery and reservations",
-  "Facility inventory coordination",
-  "Digital transaction management",
-  "EV charging integration",
-  "Vehicle-service marketplace",
-  "Fleet-oriented parking services",
-  "Operational reporting",
-  "Technology integrations",
-  "Future autonomous-ready capabilities",
+  "Parking discovery, reservations, and digital payments",
+  "Inventory coordination and facility reporting",
+  "Real-time parking availability and indoor navigation",
+  "Integrated vehicle identification",
+  "EV charging",
+  "Detailing and inspection services",
+  "Fleet staging and readiness",
+  "Overnight Fleet Bases or Rapid Turnaround Hubs",
 ];
 
 export function PartnerForm() {
