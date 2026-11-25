@@ -42,7 +42,7 @@ const platform = [
   },
   {
     title: "Digital Payments",
-    body: "Eligible parking and service payments are part of the planned platform. This corporate website does not process live payments.",
+    body: "Eligible parking and service payments are part of the planned platform.",
   },
 ];
 
