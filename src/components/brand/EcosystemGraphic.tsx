@@ -1,112 +1,272 @@
-import Image from "next/image";
-
-const vehicles = [
-  {
-    src: "/brand/ecosystem/human-driven.png",
-    alt: "Human-driven vehicles for consumer and commercial drivers.",
-    width: 338,
-    height: 112,
-  },
-  {
-    src: "/brand/ecosystem/autonomous.png",
-    alt: "Autonomous vehicles for robotaxis and commercial fleets. The vehicle is illustrative.",
-    width: 346,
-    height: 134,
-  },
-] as const;
-
-const facilities = [
-  {
-    src: "/brand/ecosystem/smart-parking.png",
-    alt: "SPAAVS Smart Parking Facilities.",
-    width: 338,
-    height: 118,
-  },
-  {
-    src: "/brand/ecosystem/autonomous-ready.png",
-    alt: "SPAAVS Autonomous-ready Facilities, including Overnight Fleet Bases and Rapid Turnaround Hubs.",
-    width: 342,
-    height: 122,
-  },
-] as const;
-
-const services = [
-  "Parking",
-  "Charging",
-  "Detailing",
-  "Inspection",
-  "Maintenance",
-] as const;
-
 /**
- * Full ecosystem diagram. The supplied animation only contains tight crops,
- * so every frame cuts off a label. These cards are the complete panels from
- * that artwork, with the cut-off headings set in type.
+ * Native ecosystem diagram. Copy and structure follow the supplied
+ * ecosystem.html reference. No photographic assets.
  */
 export function EcosystemGraphic() {
   return (
-    <figure className="w-full">
-      <div className="overflow-hidden border border-[var(--border)] bg-[#101416] text-white">
-        <div className="px-5 pt-6 text-center md:px-10 md:pt-8">
-          <p className="font-display text-2xl leading-tight md:text-4xl">
-            SPAAVS Infrastructure Ecosystem
-          </p>
-          <p className="mx-auto mt-4 inline-flex max-w-full flex-col rounded-full bg-[#0d8a84] px-6 py-3 text-center md:px-10">
-            <span className="font-display text-2xl leading-none md:text-3xl">
-              SPAAVS
-            </span>
-            <span className="mt-1 text-sm md:text-base">
-              Intelligent Mobility Infrastructure
-            </span>
-          </p>
+    <section className="spaavs-ecosystem" aria-labelledby="se-title">
+      <h2 id="se-title">SPAAVS Intelligent Mobility Infrastructure</h2>
+      <div className="se-grid">
+        <div className="se-card">
+          <svg
+            className="se-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="7" y="2" width="10" height="20" rx="2" />
+            <path d="M11 18h2" />
+          </svg>
+          <h3>SPAAVS Mobile App</h3>
+          <p>Human drivers</p>
         </div>
-
-        <div className="grid gap-3 px-4 py-4 sm:grid-cols-2 md:gap-4 md:px-6">
-          {vehicles.map((card) => (
-            <Image
-              key={card.src}
-              src={card.src}
-              alt={card.alt}
-              width={card.width}
-              height={card.height}
-              className="h-auto w-full"
-            />
-          ))}
+        <div className="se-card">
+          <svg
+            className="se-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="2" y="3" width="15" height="12" rx="2" />
+            <path d="M6 19h7m-3-4v4" />
+            <rect x="18" y="10" width="4" height="10" rx="1" />
+          </svg>
+          <h3>SPAAVS Fleet Hub</h3>
+          <p>Fleet operators</p>
         </div>
-
-        <div className="mx-4 rounded-2xl bg-white px-5 py-4 text-[#111111] md:mx-6">
-          <p className="font-display text-xl leading-tight md:text-2xl">
-            SPAAVS Digital Platform
-          </p>
-          <p className="mt-1 text-sm leading-relaxed md:text-base">
-            SPAAVS Mobile App · SPAAVS Fleet Hub · SPAAVS Mobility Hub
-          </p>
-        </div>
-
-        <div className="grid gap-3 px-4 py-4 sm:grid-cols-2 md:gap-4 md:px-6">
-          {facilities.map((card) => (
-            <Image
-              key={card.src}
-              src={card.src}
-              alt={card.alt}
-              width={card.width}
-              height={card.height}
-              className="h-auto w-full"
-            />
-          ))}
-        </div>
-
-        <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 bg-[#0d8a84] px-4 py-3 text-sm font-medium">
-          {services.map((service) => (
-            <li key={service}>{service}</li>
-          ))}
-        </ul>
       </div>
-      <figcaption className="mt-3 text-sm leading-relaxed text-[var(--ink-muted)]">
-        Conceptual illustration of Intelligent Mobility Infrastructure. Vehicle
-        imagery, including the Tesla Cybercab, is illustrative. It is not a
-        partnership, a supplier agreement, or a compatibility claim.
-      </figcaption>
-    </figure>
+      <svg
+        className="se-connector"
+        viewBox="0 0 400 24"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M100 0V9H300V0 M200 9V24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+      <section className="se-hub">
+        <header>
+          <svg
+            className="se-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M6 18a5 5 0 1 1 1-10 7 7 0 0 1 13 3 4 4 0 0 1-1 7Z" />
+          </svg>
+          <h3>SPAAVS Mobility Hub</h3>
+          <p className="se-accent">Azure SaaS Technology Stack</p>
+          <p>Cloud infrastructure · Security · Identity management · Data management</p>
+        </header>
+        <div className="se-grid">
+          <section className="se-panel">
+            <h4>
+              <svg
+                className="se-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m2 7 10-5 10 5-10 5Zm0 5 10 5 10-5M2 17l10 5 10-5" />
+              </svg>
+              SPAAVS Core Platform Services
+            </h4>
+            <ul>
+              <li>Real-time parking intelligence</li>
+              <li>Vehicle identification and tracking</li>
+              <li>Indoor mapping and navigation</li>
+              <li>Reservations and appointments</li>
+              <li>Facility access management</li>
+              <li>Parking and service bay assignments</li>
+              <li>Payments and billing</li>
+              <li>Vehicle service coordination</li>
+            </ul>
+          </section>
+          <section className="se-panel">
+            <h4>
+              <svg
+                className="se-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="4" r="3" />
+                <circle cx="4" cy="19" r="3" />
+                <circle cx="20" cy="19" r="3" />
+                <path d="m10 7-5 9m9-9 5 9M7 19h10" />
+              </svg>
+              SPAAVS Facility and Fleet Connectivity
+            </h4>
+            <ul>
+              <li>Real-time facility intelligence</li>
+              <li>Vehicle identification and tracking</li>
+              <li>Intelligent facility access & coordination (secure access, reservations and service appointments)</li>
+              <li>Parking and service bay assignments</li>
+              <li>Fleet service coordination</li>
+              <li>Vehicle readiness and service monitoring</li>
+              <li>Authorized API and system-to-system integration</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <svg
+        className="se-connector"
+        viewBox="0 0 400 24"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M200 0V9H100V24 M200 9H300V24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          vectorEffect="non-scaling-stroke"
+        />
+      </svg>
+      <div className="se-grid">
+        <div className="se-card">
+          <svg
+            className="se-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 22V6h10v16M13 12h8v10M1 22h22M6 10h4m-4 4h4m-4 4h4" />
+          </svg>
+          <h3>SPAAVS Smart Parking Facilities</h3>
+          <p>
+            Human-driven vehicles requiring real-time parking intelligence and
+            integrated vehicle services.
+          </p>
+        </div>
+        <div className="se-card">
+          <svg
+            className="se-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M2 22V8l10-6 10 6v14M6 22V10h12v12M6 14h12M6 18h12" />
+          </svg>
+          <h3>SPAAVS Autonomous-ready Facilities</h3>
+          <p>Overnight Fleet Bases · Rapid Turnaround Hubs</p>
+        </div>
+      </div>
+      <section className="se-services">
+        <h3>Integrated Vehicle Services</h3>
+        <div>
+          <span>
+            <svg
+              className="se-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="3" />
+              <path d="M9 17V7h4a3 3 0 0 1 0 6H9" />
+            </svg>
+            Parking
+          </span>
+          <span>
+            <svg
+              className="se-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M13 2 4 14h7l-1 8 10-13h-8Z" />
+            </svg>
+            Charging
+          </span>
+          <span>
+            <svg
+              className="se-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m12 2 2 7 7 3-7 2-2 8-2-8-8-2 8-3Z" />
+            </svg>
+            Detailing
+          </span>
+          <span>
+            <svg
+              className="se-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="5" y="4" width="14" height="18" rx="2" />
+              <path d="M9 2h6v5H9Zm0 12 2 2 4-5" />
+            </svg>
+            Inspection
+          </span>
+          <span>
+            <svg
+              className="se-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m14 6 4-4a7 7 0 0 1-8 10L3 19l2 2 8-8a7 7 0 0 0 9-8l-4 4Z" />
+            </svg>
+            Maintenance
+          </span>
+        </div>
+      </section>
+    </section>
   );
 }

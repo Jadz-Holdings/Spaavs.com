@@ -195,6 +195,184 @@ body {
   animation: line-draw 1s ease both;
 }
 
+.spaavs-ecosystem {
+  --se-teal: #0bb9b9;
+  --se-border: #dce8e8;
+  max-width: 1440px;
+  margin: 0 auto;
+  color: #151515;
+  background: #fff;
+  font: inherit;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid var(--se-border);
+  border-radius: 10px;
+  line-height: 1.4;
+}
+
+.spaavs-ecosystem * {
+  box-sizing: border-box;
+}
+
+.spaavs-ecosystem h2,
+.spaavs-ecosystem h3,
+.spaavs-ecosystem h4,
+.spaavs-ecosystem p {
+  margin: 0;
+}
+
+.spaavs-ecosystem h2,
+.spaavs-ecosystem h3,
+.spaavs-ecosystem h4 {
+  font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.spaavs-ecosystem h2 {
+  text-align: center;
+  font-size: clamp(1.25rem, 2.2vw, 1.9rem);
+  margin-bottom: 10px;
+}
+
+.spaavs-ecosystem .se-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.spaavs-ecosystem .se-card,
+.spaavs-ecosystem .se-panel,
+.spaavs-ecosystem .se-services {
+  border: 1px solid var(--se-border);
+  border-radius: 7px;
+  padding: 10px;
+  background: #fff;
+}
+
+.spaavs-ecosystem .se-card,
+.spaavs-ecosystem .se-hub > header,
+.spaavs-ecosystem .se-services {
+  text-align: center;
+}
+
+.spaavs-ecosystem .se-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--se-teal);
+  flex: none;
+  vertical-align: middle;
+}
+
+.spaavs-ecosystem h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.spaavs-ecosystem p {
+  font-size: 0.95rem;
+  margin-top: 3px;
+}
+
+.spaavs-ecosystem .se-hub {
+  border: 1px solid var(--se-teal);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.spaavs-ecosystem .se-hub > header {
+  margin-bottom: 10px;
+}
+
+.spaavs-ecosystem .se-hub h3 {
+  font-size: 1.4rem;
+}
+
+.spaavs-ecosystem .se-accent {
+  color: #007e80;
+  font-weight: 600;
+}
+
+.spaavs-ecosystem .se-panel h4 {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--se-teal);
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.spaavs-ecosystem ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spaavs-ecosystem li {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 2px 0;
+  text-align: left;
+}
+
+.spaavs-ecosystem li::before {
+  content: "✓";
+  color: #007e80;
+}
+
+.spaavs-ecosystem .se-connector {
+  display: block;
+  width: 100%;
+  height: 18px;
+  color: var(--se-teal);
+}
+
+.spaavs-ecosystem .se-services {
+  margin-top: 10px;
+}
+
+.spaavs-ecosystem .se-services > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin-top: 5px;
+}
+
+.spaavs-ecosystem .se-services span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .spaavs-ecosystem .se-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spaavs-ecosystem .se-connector {
+    width: 2px;
+    height: 14px;
+    background: var(--se-teal);
+    margin: auto;
+  }
+
+  .spaavs-ecosystem .se-connector path {
+    display: none;
+  }
+
+  .spaavs-ecosystem {
+    padding: 8px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

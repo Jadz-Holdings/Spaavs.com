@@ -3,10 +3,11 @@
 Read this reference before any SPAAVS modification. Preserve these distinctions unless the user explicitly approves a change.
 
 - **SPAAVS Mobile App:** Customer-facing application for human drivers.
-- **SPAAVS Fleet Hub:** The website commercial fleet operators use to subscribe to SPAAVS services, pay for them, and manage their autonomous vehicles. It is the single customer-facing fleet product. It replaces the retired names SPAAVS Mobile Hub and SPAAVS Fleet API. Do not reintroduce either name, and do not list both as separate products.
+- **SPAAVS Fleet Hub:** The website commercial fleet operators use to subscribe to SPAAVS services, pay for them, and manage their autonomous vehicles. It is the fleet operator interface and the authorized system-to-system integration solution for parking, charging, tracking, appointments, and readiness. It replaces both SPAAVS Mobile Hub and SPAAVS Fleet API as branded names. Do not reintroduce either name, and do not list both as separate products.
 - **SPAAVS Fleet Center:** A center at every facility, staffed by people on site. It is not the Fleet Hub website and not the SPAAVS Mobility Hub.
-- **SPAAVS Mobility Hub:** Official name of the Azure-hosted SaaS technology stack. Preserve this name. It is not a replacement label for the Fleet Hub.
-- **SPAAVS Facility and Fleet Connectivity:** Architectural component of the SPAAVS Mobility Hub. It is not a separately branded commercial product.
+- **SPAAVS Mobility Hub:** Official name of the Azure-hosted SaaS technology stack. It is not a physical facility and not a replacement label for the Fleet Hub. The Four-Tier Facility Development Model still uses this name for Tier 4. Do not rename that tier unless the user approves a change.
+- **SPAAVS Core Platform Services:** Architectural component of the SPAAVS Mobility Hub, paired with SPAAVS Facility and Fleet Connectivity. It is not a separately branded commercial product.
+- **SPAAVS Facility and Fleet Connectivity:** Architectural component of the SPAAVS Mobility Hub, paired with SPAAVS Core Platform Services. It is not a separately branded commercial product.
 - **Integrated LiDAR and Camera Infrastructure:** Facility-based technology supporting vehicle identification, tracking, parking availability and indoor navigation.
 - **Indoor Mapping Technology:** Spatial representation of participating facilities supporting navigation and route guidance.
 
