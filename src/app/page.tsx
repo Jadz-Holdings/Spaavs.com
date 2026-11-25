@@ -40,7 +40,7 @@ const capabilities = [
   },
   {
     title: "Intelligent Facility Access",
-    body: "Entry is verified against a reservation and authorized credentials. A license plate alone is not authorization.",
+    body: "Entry is confirmed with the reservation and authorized credentials, and the arriving vehicle is matched to that visit.",
   },
   {
     title: "SPAAVS Mobile Hub",

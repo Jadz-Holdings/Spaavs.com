@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 const technology = [
   {
     title: "Integrated LiDAR and Camera Infrastructure",
-    body: "Intelligent vehicle detection, license plate recognition, physical tracking, real-time parking availability, and indoor navigation. Detection supports the facility view. A license plate alone is not authorization.",
+    body: "Intelligent vehicle detection, license plate recognition, physical tracking, real-time parking availability, and indoor navigation. The facility sees each arriving vehicle and matches it to the visit.",
   },
   {
     title: "Intelligent Facility Access",
-    body: "SPAAVS verifies the reservation and authorized credentials before entry. A license plate alone is not authorization.",
+    body: "SPAAVS confirms the reservation and authorized credentials, then matches the arriving vehicle to that visit before entry.",
   },
   {
     title: "Real-Time Facility Intelligence",
