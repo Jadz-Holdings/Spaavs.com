@@ -104,16 +104,7 @@ export default function AutonomousMobilityPage() {
         </ul>
       </div>
 
-      <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
-        SPAAVS provides intelligent infrastructure and coordinated facility
-        services that complement the autonomous driving capabilities of vehicle
-        manufacturers and fleet operators. The SPAAVS Four-Tier Facility
-        Development Model provides a structured pathway for parking facilities
-        to progressively enhance their technological capabilities, expand
-        service offerings and support evolving mobility demands.
-      </p>
-
-      <div className="mt-5 flex flex-wrap gap-3">
+      <div className="mt-6 flex flex-wrap gap-3">
         <ButtonLink href="/contact">Explore Mobility Partnerships</ButtonLink>
         <ButtonLink href="/facility-partners" variant="secondary">
           Facility Partnerships
