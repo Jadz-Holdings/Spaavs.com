@@ -4,7 +4,7 @@ Read this reference before any SPAAVS modification. Preserve these distinctions 
 
 - **SPAAVS Mobile App:** Customer-facing application for human drivers.
 - **SPAAVS Mobile Hub:** Fleet operator interface for coordinating and monitoring fleet-related facility services.
-- **SPAAVS Fleet API:** Authorized system-to-system integration interface for compatible fleet management and vehicle platforms.
+- **SPAAVS Fleet API:** Authorized system-to-system integration. SaaS technology and APIs connect fleet systems to the SPAAVS Mobile Hub. The API is that connection, not a separate operator interface or a customer-facing application.
 - **Integrated LiDAR and Camera Infrastructure:** Facility-based technology supporting vehicle identification, tracking, parking availability and indoor navigation.
 - **Indoor Mapping Technology:** Spatial representation of participating facilities supporting navigation and route guidance.
 

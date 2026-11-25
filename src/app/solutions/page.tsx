@@ -33,8 +33,8 @@ const platform = [
     body: "Human drivers discover and reserve parking, verify access on arrival, follow an indoor route to an assigned available bay, request eligible services, pay, and exit.",
   },
   {
-    title: "SPAAVS Mobile Hub and SPAAVS Fleet API",
-    body: "Fleet systems coordinate authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
+    title: "SPAAVS Mobile Hub",
+    body: "SaaS technology and APIs connect fleet systems to the SPAAVS Mobile Hub for authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
   },
   {
     title: "EV Charging and Vehicle Services",

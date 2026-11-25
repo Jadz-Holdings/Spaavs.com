@@ -5,7 +5,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "How drivers use the SPAAVS Mobile App, and how fleets use SPAAVS Mobile Hub and the SPAAVS Fleet API. Workflows are in development.",
+    "How human drivers use the SPAAVS Mobile App, and how SaaS technology and APIs connect fleet systems to the SPAAVS Mobile Hub. Workflows are in development.",
 };
 
 const driverSteps = [
