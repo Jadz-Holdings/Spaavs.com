@@ -34,7 +34,7 @@ const platform = [
   },
   {
     title: "SPAAVS Fleet Hub",
-    body: "Fleet operators arrange parking, charging, and vehicle preparation around their schedule. The vehicle remains in control of its own movement.",
+    body: "Commercial fleet operators use the SPAAVS Fleet Hub website to subscribe to SPAAVS services, pay for those services, and manage their autonomous vehicles. Every facility includes a SPAAVS Fleet Center, staffed by people on site.",
   },
   {
     title: "EV Charging and Vehicle Services",
