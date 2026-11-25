@@ -6,7 +6,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Autonomous Mobility",
   description:
-    "SPAAVS is developing autonomous-ready parking facilities and mobility hubs for autonomous ride-hailing, including robotaxis. Overnight Fleet Bases and Rapid Turnaround Hubs support fleet readiness. The manufacturer controls driving.",
+    "SPAAVS is developing autonomous-ready parking facilities and mobility hubs for autonomous ride-hailing, including robotaxis. Intelligent infrastructure and coordinated facility services complement vehicle manufacturers and fleet operators.",
 };
 
 const hubs = [
@@ -105,8 +105,12 @@ export default function AutonomousMobilityPage() {
       </div>
 
       <p className="mt-6 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
-        SPAAVS does not operate autonomous vehicles. The manufacturer controls
-        driving. Facility tiers are capability levels, not certifications.
+        SPAAVS provides intelligent infrastructure and coordinated facility
+        services that complement the autonomous driving capabilities of vehicle
+        manufacturers and fleet operators. The SPAAVS Four-Tier Facility
+        Development Model provides a structured pathway for parking facilities
+        to progressively enhance their technological capabilities, expand
+        service offerings and support evolving mobility demands.
       </p>
 
       <div className="mt-5 flex flex-wrap gap-3">
