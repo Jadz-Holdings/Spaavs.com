@@ -6,7 +6,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Autonomous Mobility",
   description:
-    "Overnight Fleet Bases and Rapid Turnaround Hubs for authorized autonomous fleets. The vehicle manufacturer controls driving.",
+    "SPAAVS is developing autonomous-ready parking facilities and mobility hubs for autonomous ride-hailing, including robotaxis. Overnight Fleet Bases and Rapid Turnaround Hubs support fleet readiness. The manufacturer controls driving.",
 };
 
 const hubs = [
@@ -43,14 +43,20 @@ export default function AutonomousMobilityPage() {
     <Section>
       <SectionHeader
         eyebrow="Autonomous Mobility"
-        title="SPAAVS Autonomous-ready Facilities"
-        description="SPAAVS Autonomous-ready Facilities and SPAAVS Mobility Hubs are planned capability levels for fleets. They are not certifications."
+        title="Intelligent Infrastructure for Autonomous Mobility"
       />
-      <p className="max-w-3xl text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-        Compatible vehicles use authorized fleet interfaces. The manufacturer
-        controls driving. SPAAVS coordinates access, the assigned bay, charging,
-        and readiness services.
-      </p>
+      <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+        <p>
+          SPAAVS is developing a network of autonomous-ready parking facilities
+          and mobility hubs designed around the operational needs of autonomous
+          ride hailing taxis (including robotaxis).
+        </p>
+        <p>
+          Our infrastructure is designed to streamline fleet operations, reduce
+          vehicle downtime and maximize operational readiness through two
+          complementary facility models.
+        </p>
+      </div>
 
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {hubs.map((hub) => (
