@@ -33,7 +33,7 @@ const focus = [
   "Charging",
   "Detailing and inspections",
   "Maintenance coordination",
-  "SPAAVS Fleet API",
+  "SPAAVS Fleet Hub",
   "Assigned bays",
   "Fleet readiness",
 ];

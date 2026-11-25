@@ -26,9 +26,9 @@ export default function AboutPage() {
             residential facilities, and commercial properties.
           </p>
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            SPAAVS Mobile App, SPAAVS Mobile Hub, and the SPAAVS Fleet API
+            SPAAVS Mobile App, SPAAVS Fleet Hub, and the SPAAVS Mobility Hub
             connect SPAAVS Smart Parking Facilities and SPAAVS Autonomous-ready
-            Facilities. New garage construction is not the plan.
+            Facilities.
           </p>
         </div>
       </Section>

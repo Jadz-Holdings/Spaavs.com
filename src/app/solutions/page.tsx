@@ -34,7 +34,7 @@ const platform = [
   },
   {
     title: "SPAAVS Mobile Hub",
-    body: "SaaS technology and APIs connect fleet systems to the SPAAVS Mobile Hub for authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
+    body: "The SPAAVS Fleet Hub uses SaaS technology and APIs to connect fleet systems to the SPAAVS Mobile Hub for authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
   },
   {
     title: "EV Charging and Vehicle Services",

@@ -21,7 +21,7 @@ const audiences = [
   },
   {
     title: "Fleet & Mobility Operators",
-    body: "SaaS technology and APIs connect fleet systems to the SPAAVS Mobile Hub for authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
+    body: "The SPAAVS Fleet Hub uses SaaS technology and APIs to connect fleet systems to the SPAAVS Mobile Hub for authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
   },
 ];
 
@@ -67,7 +67,7 @@ const commercial = [
   "EV charging coordination",
   "Fleet parking and readiness services",
   "SPAAVS Mobile Hub",
-  "SPAAVS Fleet API integrations",
+  "SPAAVS Fleet Hub",
   "Commercial facility partnerships",
   "Autonomous mobility services as facilities upgrade",
 ];
@@ -143,7 +143,7 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Ecosystem"
           title="One Connected Mobility Ecosystem"
-          description="SPAAVS Mobile App, SPAAVS Mobile Hub, and SPAAVS Fleet API link SPAAVS Smart Parking Facilities and SPAAVS Autonomous-ready Facilities."
+          description="SPAAVS Mobile App, SPAAVS Fleet Hub, and the SPAAVS Mobility Hub link SPAAVS Smart Parking Facilities and SPAAVS Autonomous-ready Facilities."
         />
         <EcosystemGraphic />
         <div className="mt-8 grid gap-4 sm:grid-cols-2">

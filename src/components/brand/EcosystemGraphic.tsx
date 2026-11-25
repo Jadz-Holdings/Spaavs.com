@@ -79,7 +79,7 @@ export function EcosystemGraphic() {
             SPAAVS Digital Platform
           </p>
           <p className="mt-1 text-sm leading-relaxed md:text-base">
-            SPAAVS Mobile App · SPAAVS Mobile Hub · SPAAVS Fleet API
+            SPAAVS Mobile App · SPAAVS Fleet Hub · SPAAVS Mobility Hub
           </p>
         </div>
 
