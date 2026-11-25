@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About SPAAVS",
   description:
-    "SPAAVS, a Jadz Holdings LLC business, is developing intelligent parking infrastructure for human-driven vehicles, autonomous fleets, and integrated vehicle services.",
+    "SPAAVS, a Jadz Holdings LLC business, is a real-time parking facility technology and management company for human-driven vehicles, autonomous fleets, and integrated vehicle services.",
 };
 
 export default function AboutPage() {
@@ -17,18 +17,24 @@ export default function AboutPage() {
         <SectionHeader
           eyebrow="About SPAAVS"
           title="Intelligent Mobility Infrastructure"
-          description="SPAAVS is developing intelligent parking infrastructure designed to support human-driven vehicles, autonomous fleets, and integrated vehicle services."
+          description="SPAAVS is a real-time parking facility technology and management company designed to support human-driven vehicles, autonomous fleets, and integrated vehicle services."
         />
         <div className="grid gap-5 md:grid-cols-2">
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            SPAAVS is a business within the {siteConfig.parent} portfolio. The
-            strategy retrofits existing parking garages, shopping centers,
-            residential facilities, and commercial properties.
+            SPAAVS is a business within the {siteConfig.parent} portfolio. It
+            equips existing parking garages, shopping centers, residential
+            facilities, and commercial properties with real-time space
+            visibility, facility access, and indoor guidance where GPS stops
+            working.
           </p>
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            SPAAVS Mobile App, SPAAVS Fleet Hub, and the SPAAVS Mobility Hub
-            connect SPAAVS Smart Parking Facilities and SPAAVS Autonomous-ready
-            Facilities.
+            The SPAAVS Mobile App, SPAAVS Fleet Hub, and the SPAAVS Mobility
+            Hub connect SPAAVS Smart Parking Facilities and SPAAVS
+            Autonomous-ready Facilities. Facilities offer parking together with
+            charging, detailing, inspections, and maintenance. Commercial fleet
+            operators use the SPAAVS Fleet Hub to subscribe, pay, and manage
+            their autonomous vehicles, with a staffed SPAAVS Fleet Center on
+            site.
           </p>
         </div>
       </Section>
