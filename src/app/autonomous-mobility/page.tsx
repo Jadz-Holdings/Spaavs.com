@@ -52,14 +52,19 @@ export default function AutonomousMobilityPage() {
 
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {hubs.map((hub) => (
-          <article key={hub.title} className="border border-[var(--border)] p-4">
+          <article
+            key={hub.title}
+            className="overflow-hidden border border-[var(--border)]"
+          >
             <FacilityVisual label={hub.label} variant={hub.variant} />
-            <h2 className="mt-4 font-display text-2xl text-[var(--ink)]">
-              {hub.title}
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
-              {hub.body}
-            </p>
+            <div className="p-4">
+              <h2 className="font-display text-2xl text-[var(--ink)]">
+                {hub.title}
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
+                {hub.body}
+              </p>
+            </div>
           </article>
         ))}
       </div>

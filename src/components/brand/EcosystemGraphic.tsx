@@ -46,7 +46,7 @@ export function EcosystemGraphic() {
   }
 
   return (
-    <figure className="mx-auto w-full max-w-3xl" aria-labelledby={captionId}>
+    <figure className="w-full" aria-labelledby={captionId}>
       <div
         id={imageId}
         className="relative w-full overflow-hidden border border-[var(--border)] bg-[var(--surface-soft)]"
@@ -59,7 +59,7 @@ export function EcosystemGraphic() {
             width={360}
             height={265}
             unoptimized
-            className="absolute inset-0 h-full w-full object-contain"
+            className="absolute inset-0 h-full w-full object-cover"
             onError={() => setGifOk(false)}
           />
         ) : posterOk ? (
@@ -68,7 +68,7 @@ export function EcosystemGraphic() {
             alt={ALT}
             width={360}
             height={266}
-            className="absolute inset-0 h-full w-full object-contain"
+            className="absolute inset-0 h-full w-full object-cover"
             onError={() => setPosterOk(false)}
           />
         ) : (

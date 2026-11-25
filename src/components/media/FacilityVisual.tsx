@@ -1,5 +1,6 @@
 /**
  * Neutral branded stand-in for a facility photograph.
+ * The drawing fills the 16:9 frame so the image uses the card width.
  * Inline SVG so the frame cannot render as a broken image.
  */
 export function FacilityVisual({
@@ -9,56 +10,62 @@ export function FacilityVisual({
   label: string;
   variant?: "base" | "hub";
 }) {
-  const bays = variant === "hub" ? [280, 680, 1080] : [360, 760, 1160];
+  const stalls = variant === "hub" ? 5 : 4;
+  const stallWidth = 1600 / stalls;
 
   return (
     <svg
       role="img"
       aria-label={label}
       viewBox="0 0 1600 900"
-      className="aspect-video h-auto w-full border border-[var(--border)] bg-[var(--surface-soft)]"
+      className="aspect-video h-auto w-full bg-[var(--surface-soft)]"
     >
       <title>{label}</title>
       <rect width="1600" height="900" fill="var(--surface-soft)" />
-      <rect
-        x="96"
-        y="128"
-        width="1408"
-        height="644"
+      <rect width="1600" height="72" fill="var(--tiffany)" fillOpacity="0.16" />
+      <path
+        d="M0 220h1600M0 430h1600"
         fill="none"
         stroke="var(--tiffany)"
+        strokeOpacity="0.55"
         strokeWidth="3"
       />
-      <path
-        d="M96 470h1408"
-        fill="none"
-        stroke="var(--border)"
-        strokeWidth="2"
-      />
-      {bays.map((x) => (
-        <g key={x}>
-          <rect
-            x={x}
-            y="520"
-            width="220"
-            height="96"
-            rx="8"
-            fill="none"
-            stroke="var(--ink)"
-            strokeOpacity="0.28"
-            strokeWidth="3"
-          />
-          <circle cx={x + 48} cy="640" r="14" fill="var(--tiffany)" fillOpacity="0.85" />
-          <circle cx={x + 172} cy="640" r="14" fill="var(--tiffany)" fillOpacity="0.85" />
-        </g>
-      ))}
-      <path
-        d="M180 300h420M180 348h280"
-        fill="none"
-        stroke="var(--tiffany)"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
+      {Array.from({ length: stalls }, (_, index) => {
+        const x = index * stallWidth;
+        return (
+          <g key={x}>
+            <path
+              d={`M${x} 72v828`}
+              fill="none"
+              stroke="var(--border)"
+              strokeWidth="3"
+            />
+            <rect
+              x={x + stallWidth * 0.12}
+              y="500"
+              width={stallWidth * 0.76}
+              height="250"
+              rx="16"
+              fill="none"
+              stroke="var(--ink)"
+              strokeOpacity="0.35"
+              strokeWidth="4"
+            />
+            <circle
+              cx={x + stallWidth * 0.28}
+              cy="790"
+              r="22"
+              fill="var(--tiffany)"
+            />
+            <circle
+              cx={x + stallWidth * 0.72}
+              cy="790"
+              r="22"
+              fill="var(--tiffany)"
+            />
+          </g>
+        );
+      })}
     </svg>
   );
 }
