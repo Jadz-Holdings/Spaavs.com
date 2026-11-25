@@ -7,3 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## SPAAVS product reference
+
+Before modifying this site, read `SPAAVS_PRODUCT_REFERENCE.md`. The always-on Cursor rule is `.cursor/rules/spaavs-product-reference.mdc`. Preserve those product definitions and operating principles unless the user explicitly approves a change.

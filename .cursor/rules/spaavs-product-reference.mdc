@@ -1,0 +1,16 @@
+---
+description: SPAAVS product definitions and operating principles. Read before any SPAAVS change.
+alwaysApply: true
+---
+
+Before modifying SPAAVS, read `SPAAVS_PRODUCT_REFERENCE.md` at the repository root. That file is the canonical product reference. Preserve its distinctions unless the user explicitly approves a change.
+
+- **SPAAVS Mobile App:** Customer-facing application for human drivers.
+- **SPAAVS Mobile Hub:** Fleet operator interface for coordinating and monitoring fleet-related facility services.
+- **SPAAVS Fleet API:** Authorized system-to-system integration interface for compatible fleet management and vehicle platforms. Not a customer-facing application. Name it for authorized system integration, not as the fleet operator interface.
+- **Integrated LiDAR and Camera Infrastructure:** Facility-based technology supporting vehicle identification, tracking, parking availability and indoor navigation. Do not imply that customer phones require LiDAR. BLE/UWB are contingency options, not baseline infrastructure.
+- **Indoor Mapping Technology:** Spatial representation of participating facilities supporting navigation and route guidance.
+
+Vehicle identification is not access authorization. Autonomous driving remains under the vehicle manufacturer's control; SPAAVS coordinates facility services through authorized integrations and does not control vehicle motion.
+
+Parking reservations and vehicle service appointments are optional for human drivers. Walk-ins are subject to availability and facility rules. Services can be requested at participating facilities or through the Mobile App, independently or together. No mandatory bundles or app-only service requirements. Preserve hands-free driver guidance: no handheld interaction while driving. Describe intended capabilities without claiming verified deployments, certifications, or partnerships.

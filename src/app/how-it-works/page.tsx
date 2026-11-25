@@ -9,31 +9,56 @@ export const metadata: Metadata = {
 };
 
 const driverSteps = [
-  ["Discover", "Find parking with the SPAAVS Mobile App."],
-  ["Reserve", "Reserve parking at a participating facility."],
   [
-    "Arrive",
-    "Verify access on arrival. Entry uses the reservation and authorized credentials. A license plate alone is not authorization.",
+    "Discover",
+    "Find parking with the SPAAVS Mobile App. SPAAVS intelligent parking infrastructure provides real-time parking availability and information about vehicle services offered at participating facilities.",
   ],
-  ["Navigate", "Receive an indoor route to the assigned available bay."],
-  ["Request services", "Request eligible charging, detailing, or inspection services."],
-  ["Pay and exit", "Pay for eligible parking and services, then exit."],
+  [
+    "Reserve or Book — Optional",
+    "Reserve a parking space, schedule a vehicle service appointment, or combine both in a single visit. Drivers may also arrive without a reservation, subject to availability.",
+  ],
+  [
+    "Arrive & Access",
+    "Upon arrival, SPAAVS identifies the vehicle and coordinates facility access based on applicable entry requirements, parking availability and any existing reservation.",
+  ],
+  [
+    "Navigate & Park",
+    "The SPAAVS Mobile App leverages integrated LiDAR, camera infrastructure and indoor mapping technology to provide real-time, step-by-step navigation to an assigned parking space or service bay, even in underground and multilevel facilities where conventional GPS is unreliable.",
+  ],
+  [
+    "Access Vehicle Services",
+    "Request available charging, detailing, inspections and other vehicle services directly at participating facilities or through the SPAAVS Mobile App. Customers can monitor the progress and status of their requested services through the app.",
+  ],
+  [
+    "Locate & Depart",
+    "Locate your parked vehicle, review parking and service charges, complete payment and receive departure guidance where available.",
+  ],
 ];
 
 const fleetSteps = [
   [
     "Coordinate",
-    "SPAAVS Mobile Hub and the SPAAVS Fleet API coordinate the visit.",
-  ],
-  ["Authorize", "Authorized access is confirmed before the vehicle enters."],
-  ["Assign", "The facility assigns an available bay."],
-  [
-    "Prepare",
-    "Charging and readiness services are coordinated at the bay.",
+    "Fleet operators use the SPAAVS Mobile Hub to coordinate parking, charging and vehicle readiness services according to their operational requirements.",
   ],
   [
-    "Drive",
-    "The vehicle controls its own motion. The manufacturer controls driving.",
+    "Identify & Access",
+    "SPAAVS intelligent infrastructure identifies approaching vehicles, verifies authorized access and coordinates entry into participating autonomous-ready facilities.",
+  ],
+  [
+    "Assign & Navigate",
+    "SPAAVS assigns an available parking space, charging station or service bay and provides facility navigation information through authorized vehicle integrations.",
+  ],
+  [
+    "Park & Service",
+    "Vehicles access Overnight Fleet Bases or Rapid Turnaround Hubs for parking, charging, detailing, inspections and other available vehicle readiness services.",
+  ],
+  [
+    "Monitor & Confirm Readiness",
+    "Fleet operators receive real-time updates on vehicle location, charging progress, service completion and operational readiness through the SPAAVS Mobile Hub.",
+  ],
+  [
+    "Return to Operations",
+    "Once requested services are completed, SPAAVS communicates vehicle readiness and coordinates facility departure, allowing the fleet operator to return the vehicle to commercial operations.",
   ],
 ];
 
@@ -77,15 +102,15 @@ export default function HowItWorksPage() {
       <SectionHeader
         eyebrow="How It Works"
         title="Drivers and Fleets"
-        description="Human drivers use the SPAAVS Mobile App. Fleets use SPAAVS Mobile Hub and the SPAAVS Fleet API. These workflows are in development."
+        description="Human-driven vehicles use the SPAAVS Mobile App. Autonomous fleets use the SPAAVS Mobile Hub. These workflows are in development."
       />
       <p className="mb-8 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
         Use the SPAAVS Mobile App only when it is safe to do so. Do not
         manually operate a mobile device while driving.
       </p>
-      <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
-        <Steps title="Human driver" steps={driverSteps} />
-        <Steps title="Fleet" steps={fleetSteps} />
+      <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-10">
+        <Steps title="Human-Driven Vehicles" steps={driverSteps} />
+        <Steps title="Autonomous Fleets" steps={fleetSteps} />
       </div>
       <div className="mt-8 flex flex-wrap gap-3">
         <ButtonLink href="/facility-partners">Become a Facility Partner</ButtonLink>
