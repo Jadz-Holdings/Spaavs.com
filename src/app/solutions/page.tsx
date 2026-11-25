@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const technology = [
   {
     title: "Integrated LiDAR and Camera Infrastructure",
-    body: "As vehicles arrive, cameras and LiDAR installed at the facility give each driver, through the SPAAVS Mobile App, and each autonomous vehicle, through an API on the SPAAVS Mobility Hub, the information they need to reach an available parking space. The SPAAVS Mobility Hub receives real-time data from the facility sensors, knows which spaces are open, and relays that information to the driver or the autonomous fleet vehicle. Drivers and autonomous fleets can be guided through underground and multilevel garages where GPS stops working.",
+    body: "As vehicles arrive, cameras and LiDAR systems installed at the facility give each driver, through the SPAAVS Mobile App, and each autonomous vehicle, through an API on the SPAAVS Mobility Hub, the information they need to reach an available parking space. The SPAAVS Mobility Hub receives real-time data from the facility sensors, knows which spaces are open, and relays that information to the driver or the autonomous fleet vehicle. Drivers and autonomous fleets can be guided through underground and multilevel garages where GPS stops working.",
   },
   {
     title: "Intelligent Facility Access",
