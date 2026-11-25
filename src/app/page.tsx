@@ -21,7 +21,7 @@ const audiences = [
   },
   {
     title: "Fleet & Mobility Operators",
-    body: "The SPAAVS Fleet Hub uses SaaS technology and APIs to connect fleet systems to the SPAAVS Mobile Hub for authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
+    body: "Fleet operators use the SPAAVS Fleet Hub to coordinate authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
   },
 ];
 
@@ -43,7 +43,7 @@ const capabilities = [
     body: "Entry is confirmed with the reservation and authorized credentials, and the arriving vehicle is matched to that visit.",
   },
   {
-    title: "SPAAVS Mobile Hub",
+    title: "SPAAVS Fleet Hub",
     body: "Fleet coordination for authorized access, assigned bays, charging, and vehicle readiness.",
   },
   {
@@ -57,7 +57,7 @@ const layers = [
   "Integrated LiDAR and Camera Infrastructure",
   "Intelligent Facility Access",
   "Real-Time Facility Intelligence",
-  "SPAAVS Mobile Hub",
+  "SPAAVS Fleet Hub",
   "Autonomous Mobility Integration",
 ];
 
@@ -66,7 +66,6 @@ const commercial = [
   "Vehicle-service marketplace commissions",
   "EV charging coordination",
   "Fleet parking and readiness services",
-  "SPAAVS Mobile Hub",
   "SPAAVS Fleet Hub",
   "Commercial facility partnerships",
   "Autonomous mobility services as facilities upgrade",

@@ -6,8 +6,10 @@ alwaysApply: true
 Before modifying SPAAVS, read `SPAAVS_PRODUCT_REFERENCE.md` at the repository root. That file is the canonical product reference. Preserve its distinctions unless the user explicitly approves a change.
 
 - **SPAAVS Mobile App:** Customer-facing application for human drivers.
-- **SPAAVS Mobile Hub:** Fleet operator interface for coordinating and monitoring fleet-related facility services.
-- **SPAAVS Fleet Hub:** The product formerly called the SPAAVS Fleet API. SaaS technology and APIs that connect fleet systems to the SPAAVS Mobile Hub. It is that connection, not a separate operator interface or a customer-facing application. Do not reintroduce the name SPAAVS Fleet API.
+- **SPAAVS Fleet Hub:** The single customer-facing fleet product. It replaces the retired names SPAAVS Mobile Hub and SPAAVS Fleet API. Do not reintroduce either name. Where both retired names would appear, use one SPAAVS Fleet Hub reference.
+- **SPAAVS Mobility Hub:** Official name of the Azure-hosted SaaS technology stack. Preserve this name. Do not use it as a substitute for the Fleet Hub.
+- **SPAAVS Facility and Fleet Connectivity:** Architectural component of the SPAAVS Mobility Hub. Not a separately branded commercial product.
+- APIs are underlying technical interfaces, not branded commercial products. Do not rename API endpoints, database identifiers, or internal software interfaces because of this branding change.
 - **Integrated LiDAR and Camera Infrastructure:** Facility-based technology supporting vehicle identification, tracking, parking availability and indoor navigation. Do not imply that customer phones require LiDAR. BLE/UWB are contingency options, not baseline infrastructure.
 - **Indoor Mapping Technology:** Spatial representation of participating facilities supporting navigation and route guidance.
 

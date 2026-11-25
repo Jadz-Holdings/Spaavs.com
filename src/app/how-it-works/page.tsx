@@ -5,7 +5,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "How human drivers use the SPAAVS Mobile App, and how the SPAAVS Fleet Hub connects fleet systems to the SPAAVS Mobile Hub.",
+    "How human drivers use the SPAAVS Mobile App, and how autonomous fleets use the SPAAVS Fleet Hub.",
 };
 
 const driverSteps = [
@@ -38,7 +38,7 @@ const driverSteps = [
 const fleetSteps = [
   [
     "Coordinate",
-    "Fleet operators use the SPAAVS Mobile Hub to coordinate parking, charging and vehicle readiness services according to their operational requirements.",
+    "Fleet operators use the SPAAVS Fleet Hub to coordinate parking, charging and vehicle readiness services according to their operational requirements.",
   ],
   [
     "Identify & Access",
@@ -54,7 +54,7 @@ const fleetSteps = [
   ],
   [
     "Monitor & Confirm Readiness",
-    "Fleet operators receive real-time updates on vehicle location, charging progress, service completion and operational readiness through the SPAAVS Mobile Hub.",
+    "Fleet operators receive real-time updates on vehicle location, charging progress, service completion and operational readiness through the SPAAVS Fleet Hub.",
   ],
   [
     "Return to Operations",
@@ -102,7 +102,7 @@ export default function HowItWorksPage() {
       <SectionHeader
         eyebrow="How It Works"
         title="Drivers and Fleets"
-        description="Human-driven vehicles use the SPAAVS Mobile App. Autonomous fleets use the SPAAVS Mobile Hub."
+        description="Human-driven vehicles use the SPAAVS Mobile App. Autonomous fleets use the SPAAVS Fleet Hub."
       />
       <p className="mb-8 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
         Use the SPAAVS Mobile App only when it is safe to do so. Do not
