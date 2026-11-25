@@ -5,44 +5,44 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "SPAAVS technology and infrastructure: Integrated LiDAR and Camera Infrastructure, intelligent facility access, real-time facility intelligence, and autonomous mobility integration.",
+    "Intelligent mobility infrastructure for existing parking facilities. See every vehicle, manage the visit, and coordinate parking, charging, and fleet readiness.",
 };
 
 const technology = [
   {
     title: "Integrated LiDAR and Camera Infrastructure",
-    body: "Intelligent vehicle detection, license plate recognition, physical tracking, real-time parking availability, and indoor navigation. The facility sees each arriving vehicle and matches it to the visit.",
+    body: "Cameras and LiDAR show the garage each vehicle as it arrives and follow it to the bay. Operators can see which spaces are open, and drivers can be guided through underground and multilevel garages where GPS stops working.",
   },
   {
     title: "Intelligent Facility Access",
-    body: "SPAAVS confirms the reservation and authorized credentials, then matches the arriving vehicle to that visit before entry.",
+    body: "A driver who reserved ahead is recognized on arrival and matched to that visit. Drivers may also arrive without a reservation when space is available and the facility allows it.",
   },
   {
     title: "Real-Time Facility Intelligence",
-    body: "Parking availability, vehicle movement, and utilization for participating facilities.",
+    body: "Operators see the garage as it operates: open spaces, vehicle movement, and how the facility is being used. That live picture keeps access, services, and fleet staging in step.",
   },
   {
     title: "Autonomous Mobility Integration",
-    body: "Compatible vehicles connect through authorized fleet interfaces. The vehicle manufacturer controls driving. SPAAVS coordinates access, the assigned bay, and facility services.",
+    body: "An autonomous vehicle still drives itself. SPAAVS takes care of the stop: entry, an assigned bay, charging, and getting the vehicle ready to return to service.",
   },
 ];
 
 const platform = [
   {
     title: "SPAAVS Mobile App",
-    body: "Human drivers discover and reserve parking, verify access on arrival, follow an indoor route to an assigned available bay, request eligible services, pay, and exit.",
+    body: "Find a garage, see which services are offered, and choose whether to reserve parking, book a service, or both. Or simply arrive. Inside, the app leads you to your space and lets you follow a service until it is finished.",
   },
   {
     title: "SPAAVS Fleet Hub",
-    body: "Fleet operators use the SPAAVS Fleet Hub to coordinate authorized access, an assigned bay, charging, and readiness services. The vehicle controls its own motion.",
+    body: "Fleet operators arrange parking, charging, and vehicle preparation around their schedule. The vehicle remains in control of its own movement.",
   },
   {
     title: "EV Charging and Vehicle Services",
-    body: "Participating facilities can offer charging, detailing, inspections, and maintenance coordination alongside parking.",
+    body: "A stop can be more than a parking space. Participating garages can charge a vehicle, detail it, inspect it, or arrange maintenance before it leaves.",
   },
   {
     title: "Digital Payments",
-    body: "Eligible parking and service payments are part of the planned platform.",
+    body: "Parking and eligible services can be paid for as part of the same visit.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function SolutionsPage() {
         <SectionHeader
           eyebrow="Solutions"
           title="Technology and Infrastructure"
-          description="SPAAVS is designing Intelligent Mobility Infrastructure for existing parking facilities. The capabilities below are in development."
+          description="SPAAVS is designing Intelligent Mobility Infrastructure for existing parking facilities."
         />
         <div>
           {technology.map((item, index) => (
@@ -78,7 +78,7 @@ export default function SolutionsPage() {
       <Section tone="soft">
         <SectionHeader
           title="Platform Services"
-          description="Software that connects drivers, facilities, vehicle services, and fleets."
+          description="The SPAAVS Mobility Hub is the platform for the driver, the garage, the service provider, and the fleet."
         />
         <div>
           {platform.map((item) => (
