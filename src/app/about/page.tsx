@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SocialLinks } from "@/components/brand/SocialLinks";
 import { ButtonLink } from "@/components/ui/Button";
 import { Section, SectionHeader } from "@/components/ui/Section";
@@ -19,6 +20,17 @@ export default function AboutPage() {
           title="Intelligent Mobility Infrastructure"
           description="SPAAVS is a real-time parking facility technology and management company designed to support human-driven vehicles, autonomous fleets, and integrated vehicle services."
         />
+        <p className="mb-6 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+          AI in the{" "}
+          <Link
+            href="/mobile-app"
+            className="text-[var(--ink)] underline decoration-[var(--tiffany)] underline-offset-4"
+          >
+            SPAAVS Mobile App
+          </Link>{" "}
+          accepts a hands-free service request, so a driver can keep both hands
+          on the wheel.
+        </p>
         <div className="grid gap-5 md:grid-cols-2">
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
             SPAAVS is a business within the {siteConfig.parent} portfolio. It

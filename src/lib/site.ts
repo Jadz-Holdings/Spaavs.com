@@ -79,6 +79,7 @@ export const siteConfig = {
     { href: "/", label: "Home" },
     { href: "/about", label: "About SPAAVS" },
     { href: "/solutions", label: "Solutions" },
+    { href: "/mobile-app", label: "Mobile App" },
     { href: "/how-it-works", label: "How It Works" },
     { href: "/facility-partners", label: "Facility Partners" },
     { href: "/autonomous-mobility", label: "Autonomous Mobility" },
