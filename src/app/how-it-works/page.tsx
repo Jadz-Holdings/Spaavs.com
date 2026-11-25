@@ -5,7 +5,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "How It Works",
   description:
-    "How human drivers use the SPAAVS Mobile App, and how SaaS technology and APIs connect fleet systems to the SPAAVS Mobile Hub. Workflows are in development.",
+    "How human drivers use the SPAAVS Mobile App, and how SaaS technology and APIs connect fleet systems to the SPAAVS Mobile Hub.",
 };
 
 const driverSteps = [
@@ -102,7 +102,7 @@ export default function HowItWorksPage() {
       <SectionHeader
         eyebrow="How It Works"
         title="Drivers and Fleets"
-        description="Human-driven vehicles use the SPAAVS Mobile App. Autonomous fleets use the SPAAVS Mobile Hub. These workflows are in development."
+        description="Human-driven vehicles use the SPAAVS Mobile App. Autonomous fleets use the SPAAVS Mobile Hub."
       />
       <p className="mb-8 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
         Use the SPAAVS Mobile App only when it is safe to do so. Do not
