@@ -12,14 +12,16 @@ export const metadata: Metadata = {
 const hubs = [
   {
     title: "Overnight Fleet Bases",
-    label: "Overnight Fleet Base",
-    variant: "base" as const,
+    label:
+      "Conceptual view of an Overnight Fleet Base with charging stalls, a service desk, and vehicles staged for the next operating cycle.",
+    src: "/facilities/overnight-fleet-base.webp",
     body: "Long-duration parking, overnight charging, vehicle detailing, inspections, and preparation for the next operating cycle.",
   },
   {
     title: "Rapid Turnaround Hubs",
-    label: "Rapid Turnaround Hub",
-    variant: "hub" as const,
+    label:
+      "Conceptual view of a Rapid Turnaround Hub with stations to charge, clean, inspect, and prepare a vehicle between trips.",
+    src: "/facilities/rapid-turnaround-hub.webp",
     body: "Short-duration parking, rapid charging, cleaning, inspections, and vehicle readiness services between commercial trips.",
   },
 ];
@@ -56,7 +58,12 @@ export default function AutonomousMobilityPage() {
             key={hub.title}
             className="overflow-hidden border border-[var(--border)]"
           >
-            <FacilityVisual label={hub.label} variant={hub.variant} />
+            <FacilityVisual
+              src={hub.src}
+              label={hub.label}
+              width={1200}
+              height={735}
+            />
             <div className="p-4">
               <h2 className="font-display text-2xl text-[var(--ink)]">
                 {hub.title}
@@ -68,6 +75,12 @@ export default function AutonomousMobilityPage() {
           </article>
         ))}
       </div>
+      <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[var(--ink-muted)]">
+        Conceptual illustrations of Overnight Fleet Bases and Rapid Turnaround
+        Hubs. Vehicle imagery, including Tesla and Waymo vehicles, is
+        illustrative. It is not a partnership, a supplier agreement, or a
+        compatibility claim.
+      </p>
 
       <div className="mt-8">
         <h2 className="font-display text-2xl text-[var(--ink)]">
