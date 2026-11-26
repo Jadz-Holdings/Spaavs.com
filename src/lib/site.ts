@@ -77,7 +77,7 @@ export const siteConfig = {
   ] as const,
   nav: [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About SPAAVS" },
+    { href: "/about", label: "About" },
     { href: "/solutions", label: "Solutions" },
     { href: "/mobile-app", label: "Mobile App" },
     { href: "/how-it-works", label: "How It Works" },
