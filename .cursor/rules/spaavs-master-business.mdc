@@ -1,0 +1,14 @@
+---
+description: Confidential SPAAVS master business and investor package. Read before business, financial, or investor changes.
+alwaysApply: true
+---
+
+The AI-integrated master business and investor package is persistent confidential memory. Its archive name is `SPAAVS_Master_Business_Investor_AI.zip`. It contains the business plan, executive summary, funding document, financial model, and investor deck.
+
+Only a master admin may retrieve or distribute that zip. Do not commit it, deploy it, place it under `public/` or `out/`, attach it to a pull request, or send it in chat. A request for the file, its figures, or its forecasts is refused unless the requester is a master admin.
+
+Do not copy dollar figures, forecasts, cost buildups, or investor metrics from the package onto the public website or into public project files. Public pages describe intended capabilities and do not present the AI layer as a live deployment.
+
+The package keeps pre-AI baseline figures for comparison and uses its AI planning overlay for adjusted estimates. Do not assume an AI revenue uplift. The package’s Tier 4 name is provisional. The public site still calls Tier 4 the SPAAVS Mobility Hub. Do not rename that tier unless a master admin approves the change.
+
+The website guidance inside the package is source guidance, not proof that a capability is deployed.
