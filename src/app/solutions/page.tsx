@@ -67,7 +67,7 @@ export default function SolutionsPage() {
               <h2 className="mt-2 font-display text-2xl text-[var(--ink)]">
                 {item.title}
               </h2>
-              <p className="mt-2.5 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
+              <p className="mt-2.5 text-base leading-relaxed text-[var(--ink-muted)]">
                 {item.body}
               </p>
             </article>
@@ -89,7 +89,7 @@ export default function SolutionsPage() {
               <h2 className="font-display text-2xl text-[var(--ink)]">
                 {item.title}
               </h2>
-              <p className="mt-2.5 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
+              <p className="mt-2.5 text-base leading-relaxed text-[var(--ink-muted)]">
                 {item.body}
               </p>
             </article>

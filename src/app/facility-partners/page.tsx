@@ -44,7 +44,7 @@ export default function FacilityPartnersPage() {
           title="Bring Your Facility Into Intelligent Mobility Infrastructure"
           description="SPAAVS partners with parking operators and property owners to retrofit existing garages, lots, shopping centers, residential communities, and commercial properties."
         />
-        <p className="max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
+        <p className="text-base leading-relaxed text-[var(--ink-muted)]">
           Facilities can join at the appropriate tier and upgrade as demand
           warrants. These are capability levels, not certifications.
         </p>
@@ -92,7 +92,7 @@ export default function FacilityPartnersPage() {
           title="Partnership Inquiry"
           description="Tell us about your facility. Submissions are routed to the SPAAVS business contact workflow."
         />
-        <div className="max-w-3xl border border-[var(--border)] bg-[var(--bg)] p-5 md:p-6">
+        <div className="border border-[var(--border)] bg-[var(--bg)] p-5 md:p-6">
           <PartnerForm />
         </div>
       </Section>

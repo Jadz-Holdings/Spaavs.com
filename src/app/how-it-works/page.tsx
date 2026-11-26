@@ -105,7 +105,7 @@ export default function HowItWorksPage() {
         title="Drivers and Fleets"
         description="Human-driven vehicles use the SPAAVS Mobile App. Autonomous fleets use the SPAAVS Fleet Hub."
       />
-      <p className="mb-8 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
+      <p className="mb-8 text-sm leading-relaxed text-[var(--ink-muted)]">
         Use the SPAAVS Mobile App only when it is safe to do so. Do not
         manually operate a mobile device while driving. Hands-free voice
         assistance in the{" "}

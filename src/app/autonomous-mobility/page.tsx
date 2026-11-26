@@ -45,7 +45,7 @@ export default function AutonomousMobilityPage() {
         eyebrow="Autonomous Mobility"
         title="Intelligent Infrastructure for Autonomous Mobility"
       />
-      <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+      <div className="space-y-4 text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
         <p>
           SPAAVS is developing a network of autonomous-ready parking facilities
           and mobility hubs designed around the operational needs of autonomous
@@ -81,7 +81,7 @@ export default function AutonomousMobilityPage() {
           </article>
         ))}
       </div>
-      <p className="mt-3 max-w-3xl text-xs leading-relaxed text-[var(--ink-muted)]">
+      <p className="mt-3 text-xs leading-relaxed text-[var(--ink-muted)]">
         Conceptual illustrations of Overnight Fleet Bases and Rapid Turnaround
         Hubs. Vehicle imagery, including Tesla and Waymo vehicles, is
         illustrative. It is not a partnership, a supplier agreement, or a

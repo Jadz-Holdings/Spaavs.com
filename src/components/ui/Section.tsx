@@ -45,7 +45,7 @@ export function SectionHeader({
 }) {
   const alignClass = align === "center" ? "mx-auto text-center items-center" : "";
   return (
-    <div className={`mb-6 flex max-w-3xl flex-col gap-2.5 md:mb-8 md:gap-3 ${alignClass}`}>
+    <div className={`mb-6 flex flex-col gap-2.5 md:mb-8 md:gap-3 ${alignClass}`}>
       {eyebrow ? (
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent)]">
           {eyebrow}
@@ -55,7 +55,7 @@ export function SectionHeader({
         {title}
       </h2>
       {description ? (
-        <p className="max-w-2xl text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+        <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
           {description}
         </p>
       ) : null}

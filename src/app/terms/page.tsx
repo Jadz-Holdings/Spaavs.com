@@ -16,7 +16,7 @@ export default function TermsPage() {
         title="Terms of Use"
         description="Terms that apply when you use this website."
       />
-      <div className="max-w-3xl space-y-6 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
+      <div className="space-y-6 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
         <p>
           By using this website, you agree to these terms. The site provides
           general corporate information about SPAAVS and planned platform

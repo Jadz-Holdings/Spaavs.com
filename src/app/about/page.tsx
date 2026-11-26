@@ -20,7 +20,7 @@ export default function AboutPage() {
           title="Intelligent Mobility Infrastructure"
           description="SPAAVS is a real-time parking facility technology and management company designed to support human-driven vehicles, autonomous fleets, and integrated vehicle services."
         />
-        <p className="mb-6 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+        <p className="mb-6 text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
           The{" "}
           <Link
             href="/mobile-app"

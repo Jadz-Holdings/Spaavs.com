@@ -16,7 +16,7 @@ export default function PrivacyPage() {
         title="Privacy Policy"
         description="How this website handles information you submit."
       />
-      <div className="prose-spaavs max-w-3xl space-y-6 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
+      <div className="prose-spaavs space-y-6 text-sm leading-relaxed text-[var(--ink-muted)] md:text-base">
         <p>
           This corporate website is operated by SPAAVS, a {siteConfig.parent}{" "}
           business. The site provides information about a platform that is{" "}

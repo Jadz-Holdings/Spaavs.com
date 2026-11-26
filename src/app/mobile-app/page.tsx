@@ -47,7 +47,7 @@ export default function MobileAppPage() {
               title="Intelligent parking. Less distraction."
               description="The SPAAVS Mobile App is designed to help drivers find parking, navigate participating facilities, and coordinate vehicle services with less need to interact with their phones. Voice assistance and predictive intelligence are designed to simplify the journey from discovery to departure."
             />
-            <p className="max-w-3xl text-base leading-relaxed text-[var(--ink-muted)]">
+            <p className="text-base leading-relaxed text-[var(--ink-muted)]">
               Hands-free interaction is designed to reduce manual phone use. It
               does not eliminate distraction, and drivers remain responsible
               for safe driving. The app assists the driver. It does not drive
