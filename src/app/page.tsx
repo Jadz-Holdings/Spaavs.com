@@ -127,9 +127,11 @@ export default function HomePage() {
         />
         <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--ink-muted)] md:space-y-5 md:text-lg">
           <p>
-            Existing parking facilities can support digital access, charging,
-            vehicle services, fleet readiness, and autonomous mobility without
-            new garage construction.
+            Most garages and parking facilities provide only parking spaces,
+            charging stations, or both. Beyond those conventional services, an
+            existing facility can also support autonomous access, including
+            unattended entry and exit, basic vehicle maintenance, and fleet
+            readiness, without new garage construction.
           </p>
           <p>
             Partnering with SPAAVS lets a facility integrate fully with the
