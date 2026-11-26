@@ -53,7 +53,7 @@ export default function SolutionsPage() {
         <SectionHeader
           eyebrow="Solutions"
           title="Technology and Infrastructure"
-          description="SPAAVS is designing Intelligent Mobility Infrastructure for existing parking facilities."
+          description="Intelligent Mobility Infrastructure for existing parking facilities: real-time visibility of open spaces, indoor guidance where GPS stops working, facility access, charging, and vehicle services for drivers and autonomous fleets."
         />
         <div>
           {technology.map((item, index) => (
