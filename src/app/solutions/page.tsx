@@ -5,7 +5,7 @@ import { Section, SectionHeader } from "@/components/ui/Section";
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "Existing parking facilities share real-time parking availability and vehicle services with human drivers and subscribed autonomous fleets, including indoor guidance where GPS stops working.",
+    "Existing parking facilities share real-time parking availability and vehicle services with human drivers and autonomous fleets that subscribe to SPAAVS services, including indoor guidance where GPS typically stops working.",
 };
 
 const technology = [
@@ -53,7 +53,7 @@ export default function SolutionsPage() {
         <SectionHeader
           eyebrow="Solutions"
           title="Technology and Infrastructure"
-          description="Our technology stack integrates proven software and hardware on established cloud platforms, so existing parking facilities can share real-time information on parking-space availability and vehicle services (charging, detailing, and road-readiness inspections) with human drivers and with autonomous fleets that subscribe to SPAAVS. The platform also provides indoor guidance where GPS stops working."
+          description="Our technology stack integrates proven software and hardware on established cloud platforms, so existing parking facilities can share real-time information on parking-space availability and vehicle services (charging, detailing, and road-readiness inspections) with human drivers and with autonomous fleets that subscribe to SPAAVS services. Our platform also provides indoor guidance to human drivers (and potentially to autonomous vehicles) where GPS typically stops working."
         />
         <div>
           {technology.map((item, index) => (
