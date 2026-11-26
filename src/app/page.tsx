@@ -124,17 +124,34 @@ export default function HomePage() {
         <SectionHeader
           eyebrow="Infrastructure"
           title="Beyond Traditional Parking"
-          description="Existing parking facilities can support digital access, charging, vehicle services, fleet readiness, and autonomous mobility without new garage construction."
         />
-        <div className="grid gap-5 md:grid-cols-2">
-          <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            SPAAVS plans to equip participating garages and lots in phases,
-            from SPAAVS Connected facilities through SPAAVS Mobility Hubs.
+        <div className="max-w-3xl space-y-4 text-base leading-relaxed text-[var(--ink-muted)] md:space-y-5 md:text-lg">
+          <p>
+            Existing parking facilities can support digital access, charging,
+            vehicle services, fleet readiness, and autonomous mobility without
+            new garage construction.
           </p>
-          <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-            Partnerships with parking operators and property owners are how
-            the network grows. Facilities join at the appropriate tier and
-            upgrade as demand warrants.
+          <p>
+            Partnering with SPAAVS lets a facility integrate fully with the
+            SPAAVS Mobility Hub, in phases.
+          </p>
+          <p>
+            Parking operators and property owners may join the SPAAVS network
+            of connected facilities at the appropriate tier and upgrade as
+            demand warrants.
+          </p>
+          <p>
+            A vehicle from a fleet that subscribes to SPAAVS services may use
+            another facility on the network when circumstances require it,
+            typically in an emergency, such as when a reserved space is
+            unavailable.
+          </p>
+          <p>
+            Each facility includes a staffed SPAAVS Fleet Center. The center
+            can check tire pressure and add air, complete a 360-degree visual
+            inspection, provide basic lubrication when required, top off
+            windshield-washer fluid, provide a car wash, and detail the
+            interior.
           </p>
         </div>
       </Section>
