@@ -21,15 +21,16 @@ export default function AboutPage() {
           description="SPAAVS is a real-time parking facility technology and management company designed to support human-driven vehicles, autonomous fleets, and integrated vehicle services."
         />
         <p className="mb-6 max-w-3xl text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-          AI in the{" "}
+          The{" "}
           <Link
             href="/mobile-app"
             className="text-[var(--ink)] underline decoration-[var(--tiffany)] underline-offset-4"
           >
             SPAAVS Mobile App
           </Link>{" "}
-          accepts a hands-free service request, so a driver can keep both hands
-          on the wheel.
+          is designed to reduce manual phone use with hands-free voice
+          assistance and predictive parking help. Drivers remain responsible
+          for safe driving.
         </p>
         <div className="grid gap-5 md:grid-cols-2">
           <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">

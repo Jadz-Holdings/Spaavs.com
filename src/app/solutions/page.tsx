@@ -30,7 +30,7 @@ const technology = [
 const platform = [
   {
     title: "SPAAVS Mobile App",
-    body: "Find a garage, see which services are offered, and choose whether to reserve parking, book a service, or both. Or simply arrive. While driving, AI in the app accepts a hands-free service request so the driver does not handle the phone. Inside, the app leads you to your space and lets you follow a service until it is finished.",
+    body: "Find a garage, see which services are offered, and choose whether to reserve parking, book a service, or both. Or simply arrive. The app is designed to take a hands-free voice request while driving, so the driver does not have to handle the phone. Inside, it leads you to your space and lets you follow a service until it is finished.",
   },
   {
     title: "SPAAVS Fleet Hub",

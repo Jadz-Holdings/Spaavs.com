@@ -107,15 +107,16 @@ export default function HowItWorksPage() {
       />
       <p className="mb-8 max-w-3xl text-sm leading-relaxed text-[var(--ink-muted)]">
         Use the SPAAVS Mobile App only when it is safe to do so. Do not
-        manually operate a mobile device while driving. A hands-free service
-        request is part of the{" "}
+        manually operate a mobile device while driving. Hands-free voice
+        assistance in the{" "}
         <Link
           href="/mobile-app"
           className="text-[var(--ink)] underline decoration-[var(--tiffany)] underline-offset-4"
         >
           SPAAVS Mobile App
-        </Link>
-        .
+        </Link>{" "}
+        is designed to reduce that manual interaction. It does not remove the
+        driver’s responsibility for safe driving.
       </p>
       <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-10">
         <Steps title="Human-Driven Vehicles" steps={driverSteps} />

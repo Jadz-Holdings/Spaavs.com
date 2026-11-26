@@ -75,6 +75,13 @@ export function EcosystemGraphic() {
           <p className="se-accent">Azure SaaS Technology Stack</p>
           <p>Cloud infrastructure · Security · Identity management · Data management</p>
         </header>
+        <section className="se-panel se-ai" aria-label="SPAAVS AI Intelligence Layer">
+          <h4>SPAAVS AI Intelligence Layer</h4>
+          <p>
+            Hands-free voice assistance · Predictive intelligence ·
+            Personalization · Headless workflow orchestration
+          </p>
+        </section>
         <div className="se-grid">
           <section className="se-panel">
             <h4>

@@ -333,6 +333,15 @@ body {
   color: var(--se-teal);
 }
 
+.spaavs-ecosystem .se-ai {
+  margin: 8px 0;
+  text-align: center;
+}
+
+.spaavs-ecosystem .se-ai h4 {
+  justify-content: center;
+}
+
 .spaavs-ecosystem .se-services {
   margin-top: 10px;
 }

@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site";
 const audiences = [
   {
     title: "Drivers",
-    body: "Discover and reserve parking in the SPAAVS Mobile App, verify access on arrival, and receive an indoor route to an assigned available bay.",
+    body: "Discover and reserve parking in the SPAAVS Mobile App, verify access on arrival, and receive an indoor route to an assigned available bay. Voice assistance is designed to reduce manual phone use while driving.",
   },
   {
     title: "Parking Facility Operators",
@@ -54,6 +54,7 @@ const capabilities = [
 
 const layers = [
   "SPAAVS Mobile App",
+  "SPAAVS AI Intelligence Layer",
   "Integrated LiDAR and Camera Infrastructure",
   "Intelligent Facility Access",
   "Real-Time Facility Intelligence",

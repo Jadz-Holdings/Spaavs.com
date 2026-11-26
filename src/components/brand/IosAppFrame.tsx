@@ -62,8 +62,8 @@ export function IosAppFrame() {
         </div>
       </div>
       <figcaption className="mt-3 text-center text-xs leading-relaxed text-[var(--ink-muted)]">
-        iOS rendering of the SPAAVS Mobile App taking a hands-free service
-        request.
+        Illustrative iOS rendering. The SPAAVS Mobile App is designed to take a
+        hands-free service request.
       </figcaption>
     </figure>
   );
