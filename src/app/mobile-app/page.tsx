@@ -87,7 +87,7 @@ export default function MobileAppPage() {
           title="Designed with driver safety in mind"
           description="Hands-free interaction and predictive assistance are designed to reduce manual phone interaction and unnecessary decisions while driving. Spoken responses stay brief. Complex choices, payment setup, and distracting notifications wait until the vehicle is safely parked."
         />
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="space-y-8">
           <div>
             <h2 className="font-display text-xl text-[var(--ink)]">
               Example voice requests

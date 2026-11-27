@@ -7,8 +7,10 @@ The homepage ecosystem diagram, `.spaavs-ecosystem`, is the horizontal measure f
 
 Running text and `SectionHeader` titles and descriptions use that full column. Do not add `max-w-2xl`, `max-w-3xl`, or another narrower cap to them.
 
-Text inside another table, card, or panel keeps that container's width. This includes the diagram's own cells, bordered cards, image captions inside cards, the two-column step lists, forms that sit in a grid, and the empty-state sentence inside a panel.
+Continued prose stays in one column at that measure. Do not place two paragraphs of running text side by side.
 
-The homepage hero stays in its left column so the copy does not run across the hero illustration. The phone frame stays its own width beside the Mobile App introduction. The closing social row stays beside its icons.
+Text inside another table, card, or panel keeps that container's width. This includes the diagram's own cells, bordered cards, image captions inside cards, the two-column step lists, and forms that sit in a grid.
+
+The homepage hero stays in its left column so the copy does not run across the hero illustration. The phone frame stays its own width beside the Mobile App introduction.
 
 New pages use `Section` and `SectionHeader`. Do not invent a second prose width.

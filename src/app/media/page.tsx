@@ -65,7 +65,7 @@ export default function MediaPage() {
           <p className="text-sm uppercase tracking-[0.16em] text-[var(--ink-muted)]">
             No updates yet
           </p>
-          <p className="mx-auto mt-2.5 max-w-lg text-sm leading-relaxed text-[var(--ink-muted)]">
+          <p className="mt-2.5 text-sm leading-relaxed text-[var(--ink-muted)]">
             Follow @spaavs for company announcements.
           </p>
         </div>

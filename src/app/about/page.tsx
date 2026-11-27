@@ -20,27 +20,27 @@ export default function AboutPage() {
           title="Intelligent Mobility Infrastructure"
           description="SPAAVS is a real-time parking facility technology and management company designed to support human-driven vehicles, autonomous fleets, and integrated vehicle services."
         />
-        <p className="mb-6 text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
-          The{" "}
-          <Link
-            href="/mobile-app"
-            className="text-[var(--ink)] underline decoration-[var(--tiffany)] underline-offset-4"
-          >
-            SPAAVS Mobile App
-          </Link>{" "}
-          is designed to reduce manual phone use with hands-free voice
-          assistance and predictive parking help. Drivers remain responsible
-          for safe driving.
-        </p>
-        <div className="grid gap-5 md:grid-cols-2">
-          <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+        <div className="space-y-4 text-base leading-relaxed text-[var(--ink-muted)] md:space-y-5 md:text-lg">
+          <p>
+            The{" "}
+            <Link
+              href="/mobile-app"
+              className="text-[var(--ink)] underline decoration-[var(--tiffany)] underline-offset-4"
+            >
+              SPAAVS Mobile App
+            </Link>{" "}
+            is designed to reduce manual phone use with hands-free voice
+            assistance and predictive parking help. Drivers remain responsible
+            for safe driving.
+          </p>
+          <p>
             SPAAVS is a business within the {siteConfig.parent} portfolio. It
             equips existing parking garages, shopping centers, residential
             facilities, and commercial properties with real-time space
             visibility, facility access, and indoor guidance where GPS stops
             working.
           </p>
-          <p className="text-base leading-relaxed text-[var(--ink-muted)] md:text-lg">
+          <p>
             The SPAAVS Mobile App, SPAAVS Fleet Hub, and the SPAAVS Mobility
             Hub connect SPAAVS Smart Parking Facilities and SPAAVS
             Autonomous-ready Facilities. Facilities offer parking together with

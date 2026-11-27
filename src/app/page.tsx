@@ -256,38 +256,34 @@ export default function HomePage() {
       </Section>
 
       <Section tone="soft">
-        <div className="grid items-center gap-10 md:grid-cols-[1.2fr_0.8fr]">
-          <div>
-            <SectionHeader
-              eyebrow="YouTube"
-              title="Discover the Future of Mobility"
-              description="Follow SPAAVS on YouTube for intelligent parking, vehicle services, EV charging, and autonomous mobility."
-            />
-            <ButtonLink
-              href="https://www.youtube.com/@spaavs"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Watch SPAAVS on YouTube
-            </ButtonLink>
-          </div>
-          <div className="border border-[var(--border)] bg-[var(--bg)] p-6">
+        <SectionHeader
+          eyebrow="YouTube"
+          title="Discover the Future of Mobility"
+          description="Follow SPAAVS on YouTube for intelligent parking, vehicle services, EV charging, and autonomous mobility."
+        />
+        <ButtonLink
+          href="https://www.youtube.com/@spaavs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Watch SPAAVS on YouTube
+        </ButtonLink>
+        <div className="mt-6 border border-[var(--border)] bg-[var(--bg)] p-6">
             <div className="flex aspect-video w-full flex-col items-center justify-center gap-3 border border-[var(--border)] bg-[var(--surface-soft)] px-6 text-center">
               <span className="h-2 w-2 rounded-full bg-[var(--tiffany)]" />
               <p className="text-sm uppercase tracking-[0.16em] text-[var(--ink)]">
                 YouTube · {siteConfig.handle}
               </p>
-              <p className="max-w-sm text-sm text-[var(--ink-muted)]">
+              <p className="text-sm text-[var(--ink-muted)]">
                 Official videos will appear here as they are published.
               </p>
             </div>
           </div>
-        </div>
       </Section>
 
       <Section>
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-          <div className="max-w-xl">
+          <div>
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent)]">
               Connect
             </p>
